@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BookMyStay - My Bookings</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">BookMyStay</div>
+
+    <div class="profile">
+      <div class="avatar">&#128100;</div>
+      <div class="name">Alexander Wright</div>
+      <div class="tier">Premium Member</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html"><span class="icon">&#9634;</span> Dashboard</a></li>
+        <li><a href="profile.html"><span class="icon">&#128100;</span> Profile</a></li>
+        <li><a href="search.html"><span class="icon">&#128269;</span> Search</a></li>
+        <li><a href="wishlist.html"><span class="icon">&#9825;</span> Wishlist</a></li>
+        <li class="active"><a href="bookings.html"><span class="icon">&#128197;</span> Bookings</a></li>
+        <li><a href="payments.html"><span class="icon">&#128179;</span> Payments</a></li>
+        <li><a href="reviews.html"><span class="icon">&#128196;</span> Reviews</a></li>
+      </ul>
+    </nav>
+
+    <button class="book-btn">Book New Stay</button>
+    <ul class="bottom-links">
+      <li><span class="icon">&#9881;</span> Settings</li>
+      <li><span class="icon">&#9432;</span> Support</li>
+    </ul>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>Booking History</h1>
+      <div class="topbar-right">
+        <div class="search-box">&#128269; Search by hotel or booking ID...</div>
+        <div class="bell">&#128276;</div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="page-head-row">
+        <div class="page-head">
+          <h2>My Bookings</h2>
+          <p>You have 2 upcoming trips and 12 completed stays.</p>
+        </div>
+        <button class="outline-btn">&#8681; Export List</button>
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-card">
+          <div class="summary-top">&#9989; CONFIRMED</div>
+          <div class="summary-value confirmed">02</div>
+          <div class="summary-note">Next: Azure Grand Resort (in 4 days)</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-top">&#128340; PENDING</div>
+          <div class="summary-value pending">01</div>
+          <div class="summary-note">Awaiting payment verification</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-top">&#8635; TOTAL STAYS</div>
+          <div class="summary-value">14</div>
+          <div class="summary-note">Memories across 6 countries</div>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-left">
+          &#9776; Filter by:
+          <span class="filter-pill">All Statuses &#9662;</span>
+          <span class="filter-pill">Any Date &#9662;</span>
+        </div>
+        <span class="filter-count">Showing 4 of 14 bookings</span>
+      </div>
+
+      <div class="bookings-table">
+        <div class="bt-head">
+          <span>Booking ID</span>
+          <span>Hotel</span>
+          <span>Dates</span>
+          <span>Status</span>
+          <span>Total</span>
+          <span></span>
+        </div>
+
+        <div class="bt-row">
+          <span class="bt-id">#BK-92834</span>
+          <div class="bt-hotel">
+            <div class="bt-thumb" style="background:linear-gradient(135deg,#f6a35c,#2a4d7a);"></div>
+            <div>
+              <h4>Azure Grand Resort</h4>
+              <span>Nice, France</span>
+            </div>
+          </div>
+          <div class="bt-dates">Oct 12 - Oct 18, 2023<br>6 Nights</div>
+          <span class="status-pill confirmed">CONFIRMED</span>
+          <span class="bt-total">$2,450.00</span>
+          <span class="bt-actions">&#8942;</span>
+        </div>
+
+        <div class="bt-row">
+          <span class="bt-id">#BK-93012</span>
+          <div class="bt-hotel">
+            <div class="bt-thumb" style="background:linear-gradient(135deg,#5c8a6a,#2d3f2f);"></div>
+            <div>
+              <h4>Alpine Peak Chalets</h4>
+              <span>Zermatt, Switzerland</span>
+            </div>
+          </div>
+          <div class="bt-dates">Dec 20 - Dec 27, 2023<br>7 Nights</div>
+          <span class="status-pill pending">PENDING</span>
+          <span class="bt-total">$4,100.00</span>
+          <span class="bt-actions">&#8942;</span>
+        </div>
+
+        <div class="bt-row">
+          <span class="bt-id">#BK-88451</span>
+          <div class="bt-hotel">
+            <div class="bt-thumb" style="background:linear-gradient(135deg,#2a3550,#0f172a);"></div>
+            <div>
+              <h4>Metropolitan Suites</h4>
+              <span>London, UK</span>
+            </div>
+          </div>
+          <div class="bt-dates">Aug 15 - Aug 18, 2023<br>3 Nights</div>
+          <span class="status-pill completed">COMPLETED</span>
+          <span class="bt-total">$1,200.00</span>
+          <span class="bt-actions">&#8942;</span>
+        </div>
+
+        <div class="bt-row">
+          <span class="bt-id">#BK-87220</span>
+          <div class="bt-hotel">
+            <div class="bt-thumb" style="background:linear-gradient(135deg,#cfd6e0,#9aa3b2);"></div>
+            <div>
+              <h4>Azure Bay Retreat</h4>
+              <span>Maldives</span>
+            </div>
+          </div>
+          <div class="bt-dates">Jul 01 - Jul 10, 2023<br>9 Nights</div>
+          <span class="status-pill cancelled">CANCELLED</span>
+          <span class="bt-total">$5,600.00</span>
+          <span class="bt-actions">&#8942;</span>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <span>Showing 1-4 of 14 results</span>
+        <div class="page-nums">
+          <span class="page-arrow">&#8249;</span>
+          <span class="current">1</span>
+          <span>2</span>
+          <span>3</span>
+          <span class="page-arrow">&#8250;</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

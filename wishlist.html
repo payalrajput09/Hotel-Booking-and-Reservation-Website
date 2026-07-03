@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BookMyStay - My Wishlist</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">BookMyStay</div>
+
+    <div class="profile">
+      <div class="avatar">&#128100;</div>
+      <div class="name">Alexander Wright</div>
+      <div class="tier">Premium Member</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html"><span class="icon">&#9634;</span> Dashboard</a></li>
+        <li><a href="profile.html"><span class="icon">&#128100;</span> Profile</a></li>
+        <li><a href="search.html"><span class="icon">&#128269;</span> Search</a></li>
+        <li class="active"><a href="wishlist.html"><span class="icon">&#9825;</span> Wishlist</a></li>
+        <li><a href="bookings.html"><span class="icon">&#128197;</span> Bookings</a></li>
+        <li><a href="payments.html"><span class="icon">&#128179;</span> Payments</a></li>
+        <li><a href="reviews.html"><span class="icon">&#128196;</span> Reviews</a></li>
+      </ul>
+    </nav>
+
+    <button class="book-btn">Book New Stay</button>
+    <ul class="bottom-links">
+      <li><span class="icon">&#9881;</span> Settings</li>
+      <li><span class="icon">&#9432;</span> Support</li>
+    </ul>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>Wishlist</h1>
+      <div class="topbar-right">
+        <div class="search-box">&#128269; Search destinations...</div>
+        <div class="bell">&#128276;</div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="page-head-row wishlist-topbar">
+        <div class="page-head">
+          <h2>My Wishlist</h2>
+          <p>You have <b>3 items</b> saved for your upcoming journey.</p>
+        </div>
+        <div class="wishlist-topbar-actions">
+          <select class="sort-select">
+            <option>Recently Added</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="wishlist-grid">
+
+        <div class="wl-card">
+          <div class="wl-img" style="background:linear-gradient(135deg,#f6c98a,#3f6ea5);">
+            <div class="wl-heart">&#9829;</div>
+            <div class="wl-badge">Only 2 rooms left</div>
+          </div>
+          <div class="wl-body">
+            <div class="wl-head">
+              <h4>Astraea Sky Villas</h4>
+              <span class="wl-rating">&#9733; 4.9</span>
+            </div>
+            <div class="wl-loc">&#128205; Oia, Santorini</div>
+            <div class="wl-price-row">
+              <div>
+                <div class="wl-price-label">Price per night</div>
+                <div class="wl-price">&euro;1,240</div>
+              </div>
+              <label class="wl-compare"><input type="checkbox"> Compare</label>
+            </div>
+            <button class="wl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <div class="wl-card">
+          <div class="wl-img" style="background:linear-gradient(135deg,#7fd8e0,#1c6f8f);">
+            <div class="wl-heart">&#9829;</div>
+          </div>
+          <div class="wl-body">
+            <div class="wl-head">
+              <h4>Blue Horizon Retreat</h4>
+              <span class="wl-rating">&#9733; 4.8</span>
+            </div>
+            <div class="wl-loc">&#128205; Baa Atoll, Maldives</div>
+            <div class="wl-price-row">
+              <div>
+                <div class="wl-price-label">Price per night</div>
+                <div class="wl-price">&euro;890</div>
+              </div>
+              <label class="wl-compare"><input type="checkbox"> Compare</label>
+            </div>
+            <button class="wl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <div class="wl-card">
+          <div class="wl-img" style="background:linear-gradient(135deg,#c9a876,#6b5637);">
+            <div class="wl-heart">&#9829;</div>
+            <div class="wl-badge">Only 4 rooms left</div>
+          </div>
+          <div class="wl-body">
+            <div class="wl-head">
+              <h4>Aegean Pearl Resort</h4>
+              <span class="wl-rating">&#9733; 4.9</span>
+            </div>
+            <div class="wl-loc">&#128205; Elounda, Crete</div>
+            <div class="wl-price-row">
+              <div>
+                <div class="wl-price-label">Price per night</div>
+                <div class="wl-price">&euro;750</div>
+              </div>
+              <label class="wl-compare"><input type="checkbox"> Compare</label>
+            </div>
+            <button class="wl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

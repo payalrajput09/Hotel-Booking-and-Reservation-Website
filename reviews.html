@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BookMyStay - Reviews Hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">BookMyStay</div>
+
+    <div class="profile">
+      <div class="avatar">&#128100;</div>
+      <div class="name">Alexander Wright</div>
+      <div class="tier">Premium Member</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html"><span class="icon">&#9634;</span> Dashboard</a></li>
+        <li><a href="profile.html"><span class="icon">&#128100;</span> Profile</a></li>
+        <li><a href="search.html"><span class="icon">&#128269;</span> Search</a></li>
+        <li><a href="wishlist.html"><span class="icon">&#9825;</span> Wishlist</a></li>
+        <li><a href="bookings.html"><span class="icon">&#128197;</span> Bookings</a></li>
+        <li><a href="payments.html"><span class="icon">&#128179;</span> Payments</a></li>
+        <li class="active"><a href="reviews.html"><span class="icon">&#128196;</span> Reviews</a></li>
+      </ul>
+    </nav>
+
+    <button class="book-btn">Book New Stay</button>
+    <ul class="bottom-links">
+      <li><span class="icon">&#9881;</span> Settings</li>
+      <li><span class="icon">&#9432;</span> Support</li>
+    </ul>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>Reviews Hub</h1>
+      <div class="topbar-right">
+        <div class="search-box">&#128269; Search reviews...</div>
+        <div class="bell">&#128276;</div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="page-head-row">
+        <div class="page-head">
+          <h2>Reviews Hub</h2>
+          <p>Manage your feedback history and contribute new insights to the traveler community.</p>
+        </div>
+        <div style="display:flex; gap:12px;">
+          <button class="outline-btn">&#9776; Filter History</button>
+          <button class="explore-btn">&#128394; Write New Review</button>
+        </div>
+      </div>
+
+      <div class="review-stats">
+        <div class="review-stat-card">
+          <div class="rs-label">Total Reviews</div>
+          <div class="rs-value">12</div>
+          <div class="rs-note">&#8599; +2 from last month</div>
+        </div>
+        <div class="review-stat-card">
+          <div class="rs-label">Average Rating</div>
+          <div class="rs-value">4.8 <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <div class="rs-note">Consistently helpful contributions.</div>
+        </div>
+        <div class="review-stat-card dark">
+          <div class="rs-label">Impact Score</div>
+          <div class="rs-value">2.4k</div>
+          <div class="rs-note">Views on your reviews this year.</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="reviews-col">
+
+          <div class="needs-review">
+            <h3>&#128197; Stays Needing Review</h3>
+            <div class="stay-item">
+              <div class="stay-thumb" style="background:linear-gradient(135deg,#f6a35c,#2a4d7a);"></div>
+              <div style="flex:1;">
+                <h4>Azure Grand Resort</h4>
+                <p>Stayed: Oct 12 &mdash; Oct 15, 2023</p>
+                <span class="verified-tag">VERIFIED STAY</span>
+              </div>
+              <button class="review-now-btn">Review Now &rsaquo;</button>
+            </div>
+          </div>
+
+          <div class="new-review">
+            <div class="new-review-head">
+              <h3 style="margin:0;">Write a New Review</h3>
+              <span>Drafting for Azure Grand Resort</span>
+            </div>
+            <div class="rating-prompt">
+              <p>How was your overall experience?</p>
+              <div class="star-row">
+                <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+              </div>
+              <div class="select-rating">Select Your Rating</div>
+            </div>
+            <textarea class="review-textarea" placeholder="Share details of your experience... What did you love? What could be improved?"></textarea>
+            <div class="photo-row">
+              <div class="photo-thumb" style="background:linear-gradient(135deg,#e8dcc8,#c9b896);"></div>
+              <div class="add-photo">+ ADD PHOTO</div>
+            </div>
+            <div class="review-actions">
+              <button class="post-review-btn">Post Review &#9656;</button>
+              <button class="save-draft-btn">Save Draft</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="reviews-col">
+
+          <div class="rating-specifics">
+            <h3>Rating Specifics</h3>
+            <div class="rs-slider">
+              <div class="rs-slider-top">Cleanliness <b>0</b></div>
+              <div class="rs-track"></div>
+            </div>
+            <div class="rs-slider">
+              <div class="rs-slider-top">Service <b>0</b></div>
+              <div class="rs-track"></div>
+            </div>
+            <div class="rs-slider">
+              <div class="rs-slider-top">Location <b>0</b></div>
+              <div class="rs-track"></div>
+            </div>
+            <div class="rs-slider">
+              <div class="rs-slider-top">Amenities <b>0</b></div>
+              <div class="rs-track"></div>
+            </div>
+          </div>
+
+          <div class="prev-reviews">
+            <h3>&#8635; Your Previous Reviews</h3>
+
+            <div class="prev-review-item">
+              <div class="pr-top">
+                <div class="pr-thumb" style="background:linear-gradient(135deg,#f6a35c,#2a4d7a);"></div>
+                <div>
+                  <div class="pr-title-row">
+                    <h4>Azure Sands Resort &amp; Spa</h4>
+                    <span class="pub-tag">PUBLISHED</span>
+                  </div>
+                  <div class="pr-meta">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="date">&bull; Oct 14</span></div>
+                </div>
+              </div>
+              <p class="pr-quote">"The beachfront access and the infinity pool were absolutely breathtaking..."</p>
+              <div class="pr-actions">
+                <span class="edit">&#9998; Edit</span>
+                <span class="delete">&#128465; Delete</span>
+                <span class="ago">2 days ago</span>
+              </div>
+            </div>
+
+            <div class="prev-review-item">
+              <div class="pr-top">
+                <div class="pr-thumb" style="background:linear-gradient(135deg,#2a3550,#0f172a);"></div>
+                <div>
+                  <div class="pr-title-row">
+                    <h4>The Metropolitan Suites</h4>
+                    <span class="pub-tag">PUBLISHED</span>
+                  </div>
+                  <div class="pr-meta">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="date">&bull; Sep 22</span></div>
+                </div>
+              </div>
+              <p class="pr-quote">"Perfect location for business travelers. High-speed internet and quiet rooms..."</p>
+              <div class="pr-actions">
+                <span class="edit">&#9998; Edit</span>
+                <span class="delete">&#128465; Delete</span>
+                <span class="ago">1 month ago</span>
+              </div>
+            </div>
+
+            <button class="view-all-btn">View All Review History</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
