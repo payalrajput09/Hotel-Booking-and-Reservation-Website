@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookMyStay – 32 Stays in Santorini</title>
+<link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="logo">BookMyStay</div>
+      <nav class="main-nav">
+        <a href="#" class="active">Explore</a>
+        <a href="#">Destinations</a>
+        <a href="#">Offers</a>
+        <a href="#">Concierge</a>
+      </nav>
+      <div class="topbar-right">
+        <div class="search-box">
+          <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search destinations...">
+        </div>
+        <button class="btn btn-primary">Sign In</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+
+    <!-- Sidebar Filters -->
+    <aside class="filters">
+      <div class="filters-header">
+        <h3>Filters</h3>
+        <a href="#" class="clear-all">Clear All</a>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Location</label>
+        <div class="input-with-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <input type="text" placeholder="Where to?">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label-row">
+          <label class="filter-label">Budget Range</label>
+          <span class="budget-value">$150 - $850+</span>
+        </div>
+        <input type="range" class="range-slider" min="150" max="850" value="450">
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Property Type</label>
+        <div class="pill-group">
+          <button class="pill pill-active">Hotels</button>
+          <button class="pill">Villas</button>
+          <button class="pill">Resorts</button>
+        </div>
+        <div class="pill-group" style="margin-top:8px;">
+          <button class="pill">Appartments</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Amenities</label>
+        <div class="checkbox-list">
+          <label class="checkbox-item">
+            <input type="checkbox" checked>
+            <span class="checkbox-box"></span>
+            Free WiFi
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox">
+            <span class="checkbox-box"></span>
+            Infinity Pool
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" checked>
+            <span class="checkbox-box"></span>
+            Spa &amp; Wellness
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox">
+            <span class="checkbox-box"></span>
+            Pet Friendly
+          </label>
+        </div>
+      </div>
+
+      <div class="toggle-row">
+        <span>Free Cancellation</span>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider-toggle"></span>
+        </label>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="results">
+      <div class="results-header">
+        <div>
+          <h1>32 Stays in Santorini</h1>
+          <p class="results-sub">Jun 12 - Jun 18 &bull; 2 Guests</p>
+        </div>
+        <div class="sort-by">
+          <span>Sort by:</span>
+          <select>
+            <option>Price (Lowest)</option>
+            <option>Price (Highest)</option>
+            <option>Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <article class="stay-card">
+        <div class="stay-image img-astraea">
+          <button class="fav-btn" aria-label="Save">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.6 6.6 4.6 5.1 7 3.9 9.6 4.8 12 7.4 14.4 4.8 17 3.9 19.4 5.1c3 1.5 3.6 5 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+          <span class="badge badge-dark">Member Exclusive</span>
+        </div>
+        <div class="stay-info">
+          <div class="stay-info-top">
+            <div>
+              <h2>Astraea Sky Villas</h2>
+              <p class="stay-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                Oia, Santorini &bull; <a href="#">View on map</a>
+              </p>
+            </div>
+            <div class="rating">
+              <span class="star">&#9733;</span> 4.9
+              <div class="reviews-count">128 reviews</div>
+            </div>
+          </div>
+          <div class="amenity-row">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M4 12v6M20 12v6M6 12V8a2 2 0 0 1 2-2h2v6M14 12V6h2a2 2 0 0 1 2 2v4"/></svg>Infinity Pool</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M5 10a7 7 0 0 0 14 0M12 16v6"/></svg>Luxury Spa</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v20M6 2c0 3-3 3-3 6s3 3 3 3M18 2v8a2 2 0 0 1-2 2h0a2 2 0 0 1-2-2V2M18 12v10"/></svg>Gourmet Breakfast</span>
+          </div>
+          <div class="stay-bottom">
+            <div class="price-block">
+              <div><span class="price">$420</span> <span class="per-night">/ night</span></div>
+              <div class="cancellation">Free cancellation until Jun 10</div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline">Compare</button>
+              <button class="btn btn-primary">Reserve Stay</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="stay-card">
+        <div class="stay-image img-blue-horizon">
+          <button class="fav-btn" aria-label="Save">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.6 6.6 4.6 5.1 7 3.9 9.6 4.8 12 7.4 14.4 4.8 17 3.9 19.4 5.1c3 1.5 3.6 5 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="stay-info">
+          <div class="stay-info-top">
+            <div>
+              <h2>Blue Horizon Retreat</h2>
+              <p class="stay-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                Imerovigli, Santorini &bull; <a href="#">View on map</a>
+              </p>
+            </div>
+            <div class="rating">
+              <span class="star">&#9733;</span> 4.7
+              <div class="reviews-count">84 reviews</div>
+            </div>
+          </div>
+          <div class="amenity-row">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a5 5 0 0 1 5-5M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg>High-speed WiFi</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l12 16M18 4L6 20"/></svg>Sea-view Gym</span>
+          </div>
+          <div class="stay-bottom">
+            <div class="price-block">
+              <div><span class="price">$295</span> <span class="per-night">/ night</span></div>
+              <div class="cancellation cancellation-muted">Great value for this location</div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline">Compare</button>
+              <button class="btn btn-primary">Reserve Stay</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="stay-card">
+        <div class="stay-image img-aegean-pearl">
+          <button class="fav-btn" aria-label="Save">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.6 6.6 4.6 5.1 7 3.9 9.6 4.8 12 7.4 14.4 4.8 17 3.9 19.4 5.1c3 1.5 3.6 5 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="stay-info">
+          <div class="stay-info-top">
+            <div>
+              <h2>Aegean Pearl Resort</h2>
+              <p class="stay-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                Fira, Santorini &bull; <a href="#">View on map</a>
+              </p>
+            </div>
+            <div class="rating">
+              <span class="star">&#9733;</span> 4.8
+              <div class="reviews-count">210 reviews</div>
+            </div>
+          </div>
+          <div class="amenity-row">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>Sky Bar</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>Private Beach Access</span>
+          </div>
+          <div class="stay-bottom">
+            <div class="price-block">
+              <div><span class="price">$580</span> <span class="per-night">/ night</span></div>
+              <div class="cancellation">Free cancellation until Jun 15</div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline">Compare</button>
+              <button class="btn btn-primary">Reserve Stay</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Pagination -->
+      <nav class="pagination">
+        <button class="page-btn page-arrow">&#8249;</button>
+        <button class="page-btn page-active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span class="page-dots">…</span>
+        <button class="page-btn">8</button>
+        <button class="page-btn page-arrow">&#8250;</button>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <div class="logo">BookMyStay</div>
+        <p>Elevating luxury travel through curated experiences and world-class hospitality service.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Join our newsletter for exclusive travel offers.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Email address">
+          <button class="btn btn-primary">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 BookMyStay Luxury Rentals. All rights reserved.</span>
+      <div class="footer-icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
