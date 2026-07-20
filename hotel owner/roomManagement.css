@@ -1,0 +1,167 @@
+/* Page 3 — Room Management */
+
+.property-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-left: 28px;
+  white-space: nowrap;
+}
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.page-heading { font-size: 30px; font-weight: 800; color: var(--navy-900); margin: 0 0 6px; }
+.page-sub { color: var(--ink-500); font-size: 15px; margin: 0; }
+
+.head-actions { display: flex; gap: 12px; flex-shrink: 0; }
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.room-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.room-photo {
+  height: 175px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.photo-deluxe { background: linear-gradient(140deg,#0d2a58,#3f6ea8 60%,#e7bf7a); }
+.photo-ocean { background: linear-gradient(140deg,#0a3a63,#2fa9c9 60%,#dff3f6); }
+.photo-business { background: linear-gradient(140deg,#1a2033,#2c3b5a 60%,#67788f); }
+.photo-garden { background: linear-gradient(140deg,#4a3a20,#8a6a3f 60%,#c9b98a); }
+.photo-presidential { background: linear-gradient(140deg,#141a2e,#2a3350 55%,#7a8bb5); }
+
+.status-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.9);
+}
+.status-pill.green { color: var(--green); }
+.status-pill.red { color: var(--red); }
+
+.room-body { padding: 18px 20px 20px; }
+
+.room-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.room-row h3 { margin: 0; font-size: 17px; font-weight: 800; color: var(--ink-900); }
+
+.room-price { font-size: 18px; font-weight: 800; color: var(--blue-700); }
+.room-price span { font-size: 12px; font-weight: 600; color: var(--ink-500); }
+
+.room-meta { font-size: 12.5px; color: var(--ink-500); margin-bottom: 10px; }
+
+.room-desc {
+  font-size: 13.5px;
+  color: var(--ink-700);
+  margin: 0 0 18px;
+  line-height: 1.5;
+  min-height: 40px;
+}
+
+.room-footer { display: flex; gap: 10px; align-items: center; }
+
+.btn-light {
+  flex: 1;
+  justify-content: center;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  border: none;
+}
+.btn-light:hover { background: #d9e6ff; }
+
+.dots {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink-500);
+  font-weight: 900;
+}
+
+.add-room-card {
+  border: 1.5px dashed #c3cbe0;
+  background: #f7f9fd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  gap: 6px;
+  box-shadow: none;
+}
+.add-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.add-room-card h3 { margin: 0; font-size: 16px; font-weight: 800; color: var(--navy-900); }
+.add-room-card p { margin: 4px 0 0; font-size: 13px; color: var(--ink-500); }
+
+/* Performance overview */
+.perf-card { background: #eef2fb; }
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.perf-item {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+}
+.perf-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--ink-500);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.perf-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy-900);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.perf-value .up { font-size: 12.5px; font-weight: 700; color: var(--green); }
+.perf-value .ref { font-size: 11.5px; font-weight: 600; color: var(--ink-500); }
+.perf-value.warn { color: var(--red); }

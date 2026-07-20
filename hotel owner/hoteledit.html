@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Editing: Azure Sands Resort · BookMyStay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="hoteledit.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-name">BookMyStay</div>
+      <div class="brand-sub">Management Portal</div>
+    </div>
+    <nav class="nav-list">
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Dashboard</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/><path d="M15 9h4"/></svg>Add Hotel</a>
+      <a class="nav-item active" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-8h6v8"/></svg>My Hotels</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>Room Management</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Availability</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>Reservations</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="18" cy="9" r="2.5"/><path d="M16 20c.3-2.6 2-4.5 4.5-4.9"/></svg>Guests</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h5"/></svg>Analytics</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 6.9L12 17.9 5.8 21.1l1.3-6.9L2 9.4l7-.9Z"/></svg>Reviews</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1Z"/></svg>Settings</a>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="sidebar-user">
+      <div class="avatar">JD</div>
+      <div>
+        <div class="sidebar-user-name">John Doe</div>
+        <div class="sidebar-user-role">Admin Owner</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Editing:&nbsp;<strong>Azure Sands Resort</strong>
+        <span class="badge badge-green" style="margin-left:8px;">Published</span>
+      </div>
+      <div class="topbar-actions" style="margin-left:auto; gap:22px;">
+        <span class="toggle-label">Live Preview</span>
+        <label class="toggle">
+          <input type="checkbox">
+          <span class="toggle-track"></span>
+        </label>
+        <button class="icon-btn"><span class="dot"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></button>
+        <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="grid-main">
+
+        <!-- Left column -->
+        <div class="col-left">
+          <section class="card card-pad">
+            <h2 class="card-title" style="margin-bottom:22px;">General Information</h2>
+            <div class="two-col">
+              <div>
+                <label class="field-label">Hotel Name</label>
+                <input class="field-input filled" value="Azure Sands Resort">
+              </div>
+              <div>
+                <label class="field-label">Star Rating</label>
+                <select class="field-select filled">
+                  <option>5 Stars</option>
+                </select>
+              </div>
+            </div>
+            <label class="field-label" style="margin-top:20px;">Short Description</label>
+            <textarea class="field-textarea filled" style="min-height:110px;">A luxury oceanfront retreat featuring panoramic views of the Mediterranean. Azure Sands Resort combines modern elegance with timeless coastal charm, offering world-class dining, private beach access, and award-winning spa facilities.</textarea>
+          </section>
+
+          <section class="card card-pad">
+            <div class="gallery-head">
+              <h2 class="card-title">Gallery &amp; Media</h2>
+              <a href="#" class="add-link">+ Add Media</a>
+            </div>
+            <div class="gallery-grid">
+              <div class="gallery-img img1"></div>
+              <div class="gallery-img img2"></div>
+              <div class="gallery-upload">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+                Upload More
+              </div>
+            </div>
+          </section>
+
+          <section class="card card-pad">
+            <div class="room-cat-head">
+              <h2 class="card-title">Room Categories</h2>
+              <button class="btn btn-primary">+ New Category</button>
+            </div>
+            <table class="table">
+              <thead>
+                <tr><th>Room Type</th><th>Base Price</th><th>Availability</th><th>Status</th><th>Actions</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="room-name"><span class="room-icon">🛏</span> Ocean Deluxe Suite</td>
+                  <td class="price">$450 / night</td>
+                  <td>12 Rooms</td>
+                  <td><span class="badge badge-green">Active</span></td>
+                  <td class="actions-cell">
+                    <button class="icon-btn small">✎</button>
+                    <button class="icon-btn small">🗑</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="room-name"><span class="room-icon">🛏</span> Garden View Standard</td>
+                  <td class="price">$280 / night</td>
+                  <td>24 Rooms</td>
+                  <td><span class="badge badge-green">Active</span></td>
+                  <td class="actions-cell">
+                    <button class="icon-btn small">✎</button>
+                    <button class="icon-btn small">🗑</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <!-- Right column -->
+        <div class="col-right">
+          <section class="card card-pad">
+            <h2 class="card-title" style="margin-bottom:18px;">Location</h2>
+            <label class="field-label">Full Address</label>
+            <input class="field-input filled" value="Via Marina 122, Amalfi,">
+            <div class="map-box">
+              <div class="map-pin">📍</div>
+            </div>
+          </section>
+
+          <section class="card card-pad">
+            <h2 class="card-title" style="margin-bottom:16px;">Amenities</h2>
+            <div class="amenity-tags">
+              <span class="tag tag-dark">≋ Pool</span>
+              <span class="tag tag-dark">📶 Free WiFi</span>
+              <span class="tag tag-dark">🧖 Luxury Spa</span>
+              <span class="tag tag-light">🍽 Restaurant</span>
+              <span class="tag tag-light">🏋 Gym</span>
+              <span class="tag tag-light">P Valet</span>
+              <span class="tag tag-outline">+ More</span>
+            </div>
+          </section>
+
+          <section class="visibility-card">
+            <h3>Visibility Status</h3>
+            <p>Your hotel is currently live. Any saved changes will reflect immediately.</p>
+            <div class="visibility-actions">
+              <button class="btn btn-ghost">Discard</button>
+              <button class="btn btn-save">💾 Save Changes</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

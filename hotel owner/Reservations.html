@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reservations · BookMyStay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="Reservations.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-name">BookMyStay</div>
+      <div class="brand-sub">Management Portal</div>
+    </div>
+    <nav class="nav-list">
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Dashboard</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/><path d="M15 9h4"/></svg>Add Hotel</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-8h6v8"/></svg>My Hotels</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>Room Management</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Availability</a>
+      <a class="nav-item active" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>Reservations</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="18" cy="9" r="2.5"/><path d="M16 20c.3-2.6 2-4.5 4.5-4.9"/></svg>Guests</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h5"/></svg>Analytics</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 6.9L12 17.9 5.8 21.1l1.3-6.9L2 9.4l7-.9Z"/></svg>Reviews</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1Z"/></svg>Settings</a>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="sidebar-user">
+      <div class="avatar"><img src="https://i.pravatar.cc/80?img=13" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+      <div>
+        <div class="sidebar-user-name">John Doe</div>
+        <div class="sidebar-user-role">Manager</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="property-pill">🏢 Azure Grand Resort <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        Search reservations, guests...
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></button>
+        <div class="avatar"><img src="https://i.pravatar.cc/80?img=13" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-head">
+        <div>
+          <h1 class="page-heading">Reservations</h1>
+          <p class="page-sub">Manage current arrivals and upcoming bookings for your property.</p>
+        </div>
+        <div class="head-actions">
+          <button class="btn btn-primary">+ New Booking</button>
+          <button class="btn btn-outline">⭳ Export CSV</button>
+        </div>
+      </div>
+
+      <section class="card card-pad filters-card">
+        <div class="filters-row">
+          <div class="filter-field">
+            <label class="field-label">Date Range</label>
+            <input class="field-input" value="📅 Oct 24 - Oct 31, 2023" readonly>
+          </div>
+          <div class="filter-field">
+            <label class="field-label">Room Type</label>
+            <select class="field-select"><option>All Types</option></select>
+          </div>
+          <div class="filter-field">
+            <label class="field-label">Booking Source</label>
+            <select class="field-select"><option>All Sources</option></select>
+          </div>
+          <div class="filter-field">
+            <label class="field-label">Status</label>
+            <select class="field-select"><option>All Statuses</option></select>
+          </div>
+        </div>
+        <a href="#" class="clear-link">Clear Filters</a>
+      </section>
+
+      <section class="card table-card">
+        <table class="table">
+          <thead>
+            <tr><th>Guest Name</th><th>Room Type</th><th>Dates</th><th>Amount</th><th>Status</th><th>Actions</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="guest-cell"><span class="mini-avatar" style="background:#dbe4fb;color:#2451b8;">EM</span><div><div class="guest-name">Elena Martinez</div><div class="guest-id">ID: #RES-94021</div></div></td>
+              <td>Deluxe Ocean Suite</td>
+              <td><div>Oct 26 - Oct 30</div><div class="nights">4 Nights</div></td>
+              <td class="amount">$1,240.00</td>
+              <td><span class="badge badge-blue">Check-in</span></td>
+              <td class="actions-cell">
+                <button class="row-btn primary">→</button>
+                <button class="row-btn">💬</button>
+                <button class="row-btn">⋮</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="guest-cell"><span class="mini-avatar" style="background:#dbe4fb;color:#2451b8;">JW</span><div><div class="guest-name">Julian White</div><div class="guest-id">ID: #RES-94018</div></div></td>
+              <td>Standard King</td>
+              <td><div>Oct 24 - Oct 28</div><div class="nights">4 Nights</div></td>
+              <td class="amount">$840.50</td>
+              <td><span class="badge badge-green">In-house</span></td>
+              <td class="actions-cell">
+                <button class="row-btn">💬</button>
+                <button class="row-btn">⋮</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="guest-cell"><span class="mini-avatar" style="background:#fbeacd;color:#a5680a;">SA</span><div><div class="guest-name">Sarah Adams</div><div class="guest-id">ID: #RES-93995</div></div></td>
+              <td>Penthouse Suite</td>
+              <td><div>Oct 22 - Oct 26</div><div class="nights">4 Nights</div></td>
+              <td class="amount">$4,500.00</td>
+              <td><span class="badge badge-gray">Check-out</span></td>
+              <td class="actions-cell">
+                <button class="row-btn">💬</button>
+                <button class="row-btn">⋮</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="guest-cell"><span class="mini-avatar" style="background:#fbdcd9;color:#c23b32;">MK</span><div><div class="guest-name">Marcus King</div><div class="guest-id">ID: #RES-94002</div></div></td>
+              <td>Deluxe Ocean Suite</td>
+              <td><div>Nov 02 - Nov 05</div><div class="nights">3 Nights</div></td>
+              <td class="amount">$960.00</td>
+              <td><span class="badge badge-red">Cancelled</span></td>
+              <td class="actions-cell">
+                <button class="row-btn">⋮</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="guest-cell"><span class="mini-avatar" style="background:#dbe4fb;color:#2451b8;">DL</span><div><div class="guest-name">David Lee</div><div class="guest-id">ID: #RES-94105</div></div></td>
+              <td>Junior Suite</td>
+              <td><div>Oct 28 - Oct 31</div><div class="nights">3 Nights</div></td>
+              <td class="amount">$720.00</td>
+              <td><span class="badge badge-blue">Confirmed</span></td>
+              <td class="actions-cell">
+                <button class="row-btn">💬</button>
+                <button class="row-btn">⋮</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-footer">
+          <span>Showing 1-10 of 42 reservations</span>
+          <div class="pagination">
+            <button class="page-btn">‹</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">›</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="bottom-grid">
+        <section class="card card-pad">
+          <h3 class="side-title">Reservation Source Trends</h3>
+          <div class="bar-chart">
+            <div class="bar-col"><div class="bar" style="height:78%;"></div><span>Direct</span></div>
+            <div class="bar-col"><div class="bar" style="height:68%;"></div><span>Booking.com</span></div>
+            <div class="bar-col"><div class="bar" style="height:60%;"></div><span>Expedia</span></div>
+            <div class="bar-col"><div class="bar" style="height:52%;"></div><span>Airbnb</span></div>
+            <div class="bar-col"><div class="bar" style="height:38%;"></div><span>Other</span></div>
+          </div>
+        </section>
+
+        <section class="card card-pad">
+          <h3 class="side-title">Today's Quick Stats</h3>
+          <div class="stat-row">
+            <div class="stat-icon blue">→</div>
+            <div class="stat-info"><div class="stat-label">Total Check-ins</div><div class="stat-value">12 <span>8 Already In</span></div></div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-icon gray">⇥</div>
+            <div class="stat-info"><div class="stat-label">Pending Check-outs</div><div class="stat-value">5</div></div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-icon red">⚠</div>
+            <div class="stat-info"><div class="stat-label">No-Shows</div><div class="stat-value">2</div></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

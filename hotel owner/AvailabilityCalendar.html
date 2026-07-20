@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Availability Calendar · BookMyStay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="AvailabilityCalendar.css".css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-name">BookMyStay</div>
+      <div class="brand-sub">Management Portal</div>
+    </div>
+    <nav class="nav-list">
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Dashboard</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/><path d="M15 9h4"/></svg>Add Hotel</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-8h6v8"/></svg>My Hotels</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>Room Management</a>
+      <a class="nav-item active" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Availability</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>Reservations</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="18" cy="9" r="2.5"/><path d="M16 20c.3-2.6 2-4.5 4.5-4.9"/></svg>Guests</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h5"/></svg>Analytics</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 6.9L12 17.9 5.8 21.1l1.3-6.9L2 9.4l7-.9Z"/></svg>Reviews</a>
+      <a class="nav-item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1Z"/></svg>Settings</a>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="sidebar-user">
+      <div class="avatar"><img src="https://i.pravatar.cc/80?img=13" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+      <div>
+        <div class="sidebar-user-name">John Doe</div>
+        <div class="sidebar-user-role">Manager</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">Availability Calendar</div>
+      <div class="property-pill">🏢 Azure Bay Resort &amp; Spa</div>
+      <div class="topbar-actions" style="margin-left:auto;">
+        <button class="icon-btn"><span class="dot"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></button>
+        <div class="avatar"><img src="https://i.pravatar.cc/80?img=13" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="avail-grid">
+        <!-- Calendar -->
+        <section class="card card-pad calendar-card">
+          <div class="cal-toolbar">
+            <div class="cal-month-nav">
+              <button class="nav-arrow">‹</button>
+              <h2>October 2024</h2>
+              <button class="nav-arrow">›</button>
+            </div>
+            <button class="btn btn-ghost">Today</button>
+            <div class="filter-group">
+              <span class="filter-label">Filter By:</span>
+              <button class="filter-chip active">All Rooms</button>
+              <button class="filter-chip">Deluxe Suite</button>
+              <button class="filter-chip">Executive Room</button>
+              <button class="filter-chip">Single Bed</button>
+            </div>
+          </div>
+
+          <div class="cal-grid">
+            <div class="cal-dow">MON</div>
+            <div class="cal-dow">TUE</div>
+            <div class="cal-dow">WED</div>
+            <div class="cal-dow">THU</div>
+            <div class="cal-dow">FRI</div>
+            <div class="cal-dow">SAT</div>
+            <div class="cal-dow">SUN</div>
+
+            <div class="cal-cell muted"><span class="date-num">30</span></div>
+            <div class="cal-cell">
+              <div class="cell-top"><span class="date-num">1</span><span class="rate">$240</span></div>
+              <div class="event booked">● 8 Booked</div>
+              <div class="event maint">2 Maintenance</div>
+            </div>
+            <div class="cal-cell">
+              <div class="cell-top"><span class="date-num">2</span><span class="rate">$240</span></div>
+              <div class="event booked">9 Booked</div>
+              <div class="event avail">1 Available</div>
+            </div>
+            <div class="cal-cell full">
+              <div class="cell-top"><span class="date-num">3</span><span class="rate">$280</span></div>
+              <div class="full-lock">🔒<br>FULLY BOOKED</div>
+            </div>
+            <div class="cal-cell">
+              <div class="cell-top"><span class="date-num">4</span><span class="rate">$280</span></div>
+              <div class="event renov">🔧 Floor 4 Renov.</div>
+              <div class="event booked">4 Booked</div>
+            </div>
+            <div class="cal-cell">
+              <div class="cell-top"><span class="date-num">5</span><span class="rate">$310</span></div>
+              <div class="event stay">Stay: Smith x 12 days</div>
+            </div>
+            <div class="cal-cell">
+              <div class="cell-top"><span class="date-num">6</span><span class="rate">$310</span></div>
+              <div class="event stay">Stay: Smith x 12 days</div>
+            </div>
+
+            <div class="cal-cell"><span class="date-num">7</span><div class="event stay">Stay: Smith x 12 days</div></div>
+            <div class="cal-cell"><span class="date-num">8</span><div class="event stay">Stay: Smith x 12 days</div></div>
+            <div class="cal-cell"><span class="date-num">9</span><div class="event stay">Stay: Smith x 12 days</div></div>
+            <div class="cal-cell"><span class="date-num">10</span><div class="event stay">Stay: Smith x 12 days</div></div>
+            <div class="cal-cell"><span class="date-num">11</span><div class="event stay">Stay: Smith x 12 days</div></div>
+            <div class="cal-cell"><span class="date-num">12</span><div class="event stay">Stay: Smith x 12 days</div></div>
+            <div class="cal-cell"><span class="date-num">13</span><div class="event stay">Stay: Smith x 12 days</div></div>
+
+            <div class="cal-cell empty"><span class="date-num">14</span></div>
+            <div class="cal-cell empty"><span class="date-num">15</span></div>
+            <div class="cal-cell empty"><span class="date-num">16</span></div>
+            <div class="cal-cell empty"><span class="date-num">17</span></div>
+            <div class="cal-cell empty"><span class="date-num">18</span></div>
+            <div class="cal-cell empty"><span class="date-num">19</span></div>
+            <div class="cal-cell empty"><span class="date-num">20</span></div>
+
+            <div class="cal-cell empty"><span class="date-num">21</span></div>
+            <div class="cal-cell empty"><span class="date-num">22</span></div>
+            <div class="cal-cell empty"><span class="date-num">23</span></div>
+            <div class="cal-cell empty"><span class="date-num">24</span></div>
+            <div class="cal-cell empty"><span class="date-num">25</span></div>
+            <div class="cal-cell empty"><span class="date-num">26</span></div>
+            <div class="cal-cell empty"><span class="date-num">27</span></div>
+          </div>
+
+          <div class="cal-legend">
+            <span><i class="dot-legend booked"></i>Booked</span>
+            <span><i class="dot-legend maint"></i>Maintenance</span>
+            <span><i class="dot-legend avail"></i>Available</span>
+          </div>
+        </section>
+
+        <!-- Right column -->
+        <aside class="side-col">
+          <section class="card card-pad">
+            <h3 class="side-title">🚫 Quick Block Dates</h3>
+
+            <label class="field-label">Reason for Blocking</label>
+            <input class="field-input" value="Maintenance &amp; Re..." style="margin-bottom:16px;">
+
+            <div class="two-col">
+              <div>
+                <label class="field-label">From</label>
+                <input class="field-input" type="date" value="2024-10-15">
+              </div>
+              <div>
+                <label class="field-label">To</label>
+                <input class="field-input" type="date" value="2024-10-18">
+              </div>
+            </div>
+
+            <label class="field-label" style="margin-top:18px;">Room Category</label>
+            <div class="pill-row">
+              <button class="filter-chip">Deluxe</button>
+              <button class="filter-chip active">Executive</button>
+              <button class="filter-chip">Standard</button>
+            </div>
+
+            <button class="btn btn-primary full-width">Block Selected Dates</button>
+          </section>
+
+          <section class="card card-pad">
+            <h3 class="side-title">🏷 Bulk Pricing</h3>
+            <p class="side-desc">Update room rates for specific periods or weekends.</p>
+
+            <div class="pricing-item">
+              <div class="pricing-row">
+                <span>Weekend Surge</span>
+                <span class="pill-badge up">+15%</span>
+              </div>
+              <p>Applies to all Fri-Sun bookings in October.</p>
+              <a href="#" class="link">Adjust Rate</a>
+            </div>
+
+            <div class="pricing-item">
+              <div class="pricing-row">
+                <span>Early Bird Special</span>
+                <span class="pill-badge down">-10%</span>
+              </div>
+              <p>Book 60 days in advance for Nov-D...</p>
+              <a href="#" class="link">Manage Deal</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <button class="fab">+</button>
+</div>
+</body>
+</html>
