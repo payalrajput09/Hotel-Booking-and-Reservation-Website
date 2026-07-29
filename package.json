@@ -1,0 +1,32 @@
+{
+  "name": "hotel-booking-webiste",
+  "version": "1.0.0",
+  "description": "BookMyStay – A full-stack Hotel Booking and Reservation Management System that enables users to discover hotels, check room availability, make secure online bookings, manage reservations, and provides dedicated dashboards for hotel owners and administrators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payalrajput09/Hotel-Booking-and-Reservation-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/payalrajput09/Hotel-Booking-and-Reservation-Website/issues"
+  },
+  "homepage": "https://github.com/payalrajput09/Hotel-Booking-and-Reservation-Website#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
