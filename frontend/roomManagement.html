@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Room Management · BookMyStay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="./css/common-owner.css">
+<link rel="stylesheet" href="./css/roomManagement.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-name">BookMyStay</div>
+            <div class="brand-sub">Management Portal</div>
+        </div>
+
+        <nav class="nav-list">
+
+            <a class="nav-item" href="#">
+                Dashboard
+            </a>
+
+            <a class="nav-item" href="addHotel.html">
+                Add Hotel
+            </a>
+
+            <a class="nav-item" href="myHotels.html">
+                My Hotels
+            </a>
+
+            <a class="nav-item active" href="roomManagement.html">
+                Room Management
+            </a>
+
+            <a class="nav-item" href="AvailabilityCalendar.html">
+                Availability
+            </a>
+
+            <a class="nav-item" href="Reservations.html">
+                Reservations
+            </a>
+
+            <a class="nav-item" href="GuestManagement.html">
+                Guests
+            </a>
+
+            <a class="nav-item" href="RevenueAnalytics.html">
+                Analytics
+            </a>
+
+            <a class="nav-item" href="#">
+                Reviews
+            </a>
+
+            <a class="nav-item" href="HotelSettings.html">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchRoom"
+                    placeholder="Search Rooms..."
+                >
+
+            </div>
+
+            <!-- Hotel Filter -->
+
+            <div class="property-select">
+
+                <select id="hotelFilter">
+
+                    <option value="all">
+                        All Hotels
+                    </option>
+
+                </select>
+
+            </div>
+
+        </header>
+
+        <!-- Content -->
+
+        <main class="content">
+
+            <div class="page-head">
+
+                <div>
+
+                    <h1 class="page-heading">
+                        Room Management
+                    </h1>
+
+                    <p class="page-sub">
+                        Configure and manage your inventory across all properties.
+                    </p>
+
+                </div>
+
+                <div class="head-actions">
+
+                    <button class="btn btn-outline">
+                        📅 Seasonal Pricing
+                    </button>
+
+                    <button
+                        class="btn btn-primary"
+                        id="addRoomBtn">
+
+                        + Add Room
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Rooms -->
+
+            <div
+                class="room-grid"
+                id="roomContainer">
+
+            </div>
+
+            <!-- Add Room Card -->
+
+            <article
+                class="room-card add-room-card"
+                id="addRoomCard">
+
+                <div class="add-circle">
+                    +
+                </div>
+
+                <h3>
+                    Add New Room
+                </h3>
+
+                <p>
+                    Expand your property inventory
+                </p>
+
+            </article>
+
+            <!-- Performance -->
+
+            <section class="card card-pad perf-card">
+
+                <h2 class="card-title">
+                    Room Performance Overview
+                </h2>
+
+                <div class="perf-grid">
+
+                    <div class="perf-item">
+                        <div class="perf-label">Occupancy Rate</div>
+                        <div class="perf-value">
+                            84%
+                        </div>
+                    </div>
+
+                    <div class="perf-item">
+                        <div class="perf-label">Average Daily Rate</div>
+                        <div class="perf-value">
+                            ₹2500
+                        </div>
+                    </div>
+
+                    <div class="perf-item">
+                        <div class="perf-label">Available Rooms</div>
+                        <div class="perf-value">
+                            0
+                        </div>
+                    </div>
+
+                    <div class="perf-item">
+                        <div class="perf-label">Maintenance</div>
+                        <div class="perf-value">
+                            0
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script src="./js/roomManagement.js"></script>
+
+</body>
+</html>

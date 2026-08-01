@@ -6,6 +6,7 @@ const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
 const ownerRoutes = require("./routes/ownerRoutes");
 const hotelRoutes = require("./routes/hotelRoutes");
+const roomRoutes = require("./routes/roomRoutes");
 
 // Import Database
 const connectDB = require("./config/db");
@@ -27,7 +28,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/owner", ownerRoutes);
 app.use("/api/hotels", hotelRoutes);
+app.use("/api/rooms", roomRoutes);
 
+console.log("✅ Room Routes Registered");
 
 
 
