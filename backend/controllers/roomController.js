@@ -285,12 +285,56 @@ const updateRoom = async (req, res) => {
     }
 
 };
+// ======================================
+// Delete Room
+// ======================================
+
+const deleteRoom = async (req, res) => {
+
+    try {
+
+        const room = await Room.findById(req.params.id);
+
+        if (!room) {
+            return res.status(404).json({
+                success: false,
+                message: "Room Not Found"
+            });
+        }
+
+        // Security Check
+
+        if (room.owner.toString() !== req.user.id) {
+            return res.status(403).json({
+                success: false,
+                message: "Unauthorized"
+            });
+        }
+
+        await Room.findByIdAndDelete(req.params.id);
+
+        res.status(200).json({
+            success: true,
+            message: "Room Deleted Successfully"
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+};
 
 module.exports = {
 
     addRoom,
     getMyRooms,
     getSingleRoom,
-    updateRoom
+    updateRoom,
+    deleteRoom
 
 };

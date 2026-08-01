@@ -265,9 +265,66 @@ function editRoom(id) {
 // Delete Room
 // ===============================
 
-function deleteRoom(id) {
+// ===============================
+// Delete Room
+// ===============================
 
-    alert("Delete API will be added in next step.");
+async function deleteRoom(id) {
+
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this room?"
+    );
+
+    if (!confirmDelete) {
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+
+            `http://localhost:5000/api/rooms/${id}`,
+
+            {
+
+                method: "DELETE",
+
+                headers: {
+
+                    Authorization: `Bearer ${token}`
+
+                }
+
+            }
+
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            alert(data.message);
+
+            // Reload Rooms
+            loadRooms();
+
+        }
+
+        else {
+
+            alert(data.message);
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.log(error);
+
+        alert("Something went wrong");
+
+    }
 
 }
 

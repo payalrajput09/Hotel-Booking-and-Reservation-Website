@@ -6,7 +6,8 @@ const {
     addRoom,
     getMyRooms,
     getSingleRoom,
-    updateRoom
+    updateRoom,
+    deleteRoom
 } = require("../controllers/roomController");
 
 
@@ -43,6 +44,16 @@ router.put(
     verifyToken,
     isOwner,
     updateRoom
+);
+
+// Delete Room
+
+router.delete(
+     "/:id",
+     verifyToken,
+     isOwner,
+     deleteRoom
+
 );
 
 module.exports = router;
