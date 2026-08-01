@@ -6,7 +6,8 @@ const {
     addHotel,
     getMyHotels,
     getSingleHotel,
-    updateHotel
+    updateHotel,
+    deleteHotel
 } = require("../controllers/hotelController");
 
 const { verifyToken } = require("../middleware/authMiddleware");
@@ -43,5 +44,14 @@ router.put(
     isOwner,
     updateHotel
 );
+
+// Delete Hotel
+router.delete(
+    "/delete/:id",
+    verifyToken,
+    isOwner,
+    deleteHotel
+);
+
 
 module.exports = router;

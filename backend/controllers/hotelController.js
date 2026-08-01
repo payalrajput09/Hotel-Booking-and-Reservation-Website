@@ -199,11 +199,64 @@ const updateHotel = async (req, res) => {
     }
 
 };
+
+// ===============================
+// Delete Hotel
+// ===============================
+
+const deleteHotel = async (req, res) => {
+
+    try {
+
+        const hotel = await Hotel.findById(req.params.id);
+
+        if (!hotel) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Hotel Not Found"
+            });
+
+        }
+
+        // Check Owner
+        if (hotel.owner.toString() !== req.user.id) {
+
+            return res.status(403).json({
+                success: false,
+                message: "You are not authorized to delete this hotel"
+            });
+
+        }
+
+        await Hotel.findByIdAndDelete(req.params.id);
+
+        res.status(200).json({
+
+            success: true,
+            message: "Hotel Deleted Successfully"
+
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
   
 
 module.exports = {
     addHotel,
     getMyHotels,
     getSingleHotel,
-    updateHotel
+    updateHotel,
+    deleteHotel
 };

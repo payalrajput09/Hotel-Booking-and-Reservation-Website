@@ -104,3 +104,58 @@ async function loadHotels() {
 }
 
 loadHotels();
+
+
+// ===============================
+// Delete Hotel
+// ===============================
+
+document.addEventListener("click", async (e) => {
+
+    if (!e.target.classList.contains("delete-btn")) return;
+
+    const hotelId = e.target.dataset.id;
+
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this hotel?"
+    );
+
+    if (!confirmDelete) return;
+
+    try {
+
+        const response = await fetch(
+            `http://localhost:5000/api/hotels/delete/${hotelId}`,
+            {
+
+                method: "DELETE",
+
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+
+            }
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            alert("Hotel Deleted Successfully");
+
+            // Reload Hotel List
+            loadHotels();
+
+        } else {
+
+            alert(data.message);
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+});
