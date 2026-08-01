@@ -148,9 +148,149 @@ const getMyRooms = async (req, res) => {
 
 };
 
+
+// ======================================
+// Get Single Room
+// ======================================
+
+const getSingleRoom = async (req, res) => {
+
+    try {
+
+        const room = await Room.findById(req.params.id)
+            .populate("hotel", "hotelName");
+
+        if (!room) {
+
+            return res.status(404).json({
+
+                success: false,
+                message: "Room Not Found"
+
+            });
+
+        }
+
+        // Owner Security Check
+
+        if (room.owner.toString() !== req.user.id) {
+
+            return res.status(403).json({
+
+                success: false,
+                message: "Unauthorized"
+
+            });
+
+        }
+
+        res.status(200).json({
+
+            success: true,
+            room
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
+// ======================================
+// Update Room
+// ======================================
+
+const updateRoom = async (req, res) => {
+
+    try {
+
+        const room = await Room.findById(req.params.id);
+
+        if (!room) {
+
+            return res.status(404).json({
+
+                success: false,
+                message: "Room Not Found"
+
+            });
+
+        }
+
+        // Owner Security
+
+        if (room.owner.toString() !== req.user.id) {
+
+            return res.status(403).json({
+
+                success: false,
+                message: "Unauthorized"
+
+            });
+
+        }
+
+        const {
+
+            roomName,
+            roomType,
+            price,
+            capacity,
+            description,
+            image,
+            status
+
+        } = req.body;
+
+        room.roomName = roomName;
+        room.roomType = roomType;
+        room.price = price;
+        room.capacity = capacity;
+        room.description = description;
+        room.image = image;
+        room.status = status;
+
+        await room.save();
+
+        res.status(200).json({
+
+            success: true,
+            message: "Room Updated Successfully",
+            room
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
 module.exports = {
 
     addRoom,
-    getMyRooms
+    getMyRooms,
+    getSingleRoom,
+    updateRoom
 
 };

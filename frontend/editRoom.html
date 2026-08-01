@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Room | BookMyStay</title>
+
+    <link rel="stylesheet" href="./css/common-owner.css">
+    <link rel="stylesheet" href="./css/addRoom.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+
+    <div class="left-panel">
+
+        <h1>Edit Room</h1>
+
+        <p>
+            Update your room details and keep your hotel information up to date.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1566665797739-1674de7a421a"
+            alt="Room">
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="right-panel">
+
+        <form id="roomForm">
+
+            <h2>Room Information</h2>
+
+            <!-- Hotel -->
+
+            <div class="input-group">
+
+                <label>Select Hotel</label>
+
+                <select id="hotelId" disabled></select>
+
+                    <option value="">
+                        Select Hotel
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Room Name -->
+
+            <div class="input-group">
+
+                <label>Room Name</label>
+
+                <input
+                    type="text"
+                    id="roomName"
+                    placeholder="Deluxe Room"
+                    required>
+
+            </div>
+
+            <!-- Room Type -->
+
+            <div class="input-group">
+
+                <label>Room Type</label>
+
+                <select id="roomType">
+
+                    <option value="Standard">Standard</option>
+
+                    <option value="Deluxe">Deluxe</option>
+
+                    <option value="Suite">Suite</option>
+
+                    <option value="Family">Family</option>
+
+                    <option value="Luxury">Luxury</option>
+
+                </select>
+
+            </div>
+
+            <!-- Price -->
+
+            <div class="input-group">
+
+                <label>Price Per Night (₹)</label>
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="2500"
+                    required>
+
+            </div>
+
+            <!-- Capacity -->
+
+            <div class="input-group">
+
+                <label>Capacity</label>
+
+                <input
+                    type="number"
+                    id="capacity"
+                    placeholder="2"
+                    required>
+
+            </div>
+
+            <!-- Description -->
+
+            <div class="input-group">
+
+                <label>Description</label>
+
+                <textarea
+
+                    id="description"
+
+                    rows="5"
+
+                    placeholder="Beautiful deluxe room with AC, WiFi, TV..."
+
+                    required>
+
+                </textarea>
+
+            </div>
+
+            <!-- Image -->
+
+            <div class="input-group">
+
+                <label>Image URL</label>
+
+                <input
+
+                    type="text"
+
+                    id="image"
+
+                    placeholder="https://..."
+
+                    required>
+
+            </div>
+
+            <!-- Status -->
+
+            <div class="input-group">
+
+                <label>Status</label>
+
+                <select id="status">
+
+                    <option value="Available">
+                        Available
+                    </option>
+
+                    <option value="Occupied">
+                        Occupied
+                    </option>
+
+                    <option value="Maintenance">
+                        Maintenance
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button
+                   type="submit"
+                    class="save-btn">
+
+                    Update Room
+
+                </button>
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="window.location.href='roomManagement.html'">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="./js/editRoom.js"></script>
+
+</body>
+
+</html>
