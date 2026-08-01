@@ -99,7 +99,111 @@ const getMyHotels = async (req, res) => {
 
 };
 
+
+
+// ===============================
+// Get Single Hotel
+// ===============================
+
+const getSingleHotel = async (req, res) => {
+
+    try {
+
+        const hotel = await Hotel.findById(req.params.id);
+
+        if (!hotel) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Hotel Not Found"
+            });
+
+        }
+
+        if (hotel.owner.toString() !== req.user.id) {
+
+            return res.status(403).json({
+                success: false,
+                message: "Access Denied"
+            });
+
+        }
+
+        res.status(200).json({
+
+            success: true,
+            hotel
+
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
+// ===============================
+// Update Hotel
+// ===============================
+
+const updateHotel = async (req, res) => {
+
+    try {
+
+        const hotel = await Hotel.findById(req.params.id);
+
+        if (!hotel) {
+            return res.status(404).json({
+                success: false,
+                message: "Hotel Not Found"
+            });
+        }
+
+        // Owner check
+        if (hotel.owner.toString() !== req.user.id) {
+            return res.status(403).json({
+                success: false,
+                message: "Unauthorized Access"
+            });
+        }
+
+        const updatedHotel = await Hotel.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            {
+                new: true,
+                runValidators: true
+            }
+        );
+
+        res.status(200).json({
+            success: true,
+            message: "Hotel Updated Successfully",
+            hotel: updatedHotel
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+};
+  
+
 module.exports = {
     addHotel,
-    getMyHotels
+    getMyHotels,
+    getSingleHotel,
+    updateHotel
 };

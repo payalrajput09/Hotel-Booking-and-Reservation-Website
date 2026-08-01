@@ -74,9 +74,9 @@ async function loadHotels() {
 
                     <div class="hotel-buttons">
 
-                        <button class="edit-btn">
-                            Edit
-                        </button>
+                        <a href="editHotel.html?id=${hotel._id}" class="edit-btn">
+                                   Edit
+                        </a>
 
                         <button
                             class="delete-btn"

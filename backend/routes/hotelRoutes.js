@@ -4,7 +4,9 @@ const router = express.Router();
 
 const {
     addHotel,
-    getMyHotels
+    getMyHotels,
+    getSingleHotel,
+    updateHotel
 } = require("../controllers/hotelController");
 
 const { verifyToken } = require("../middleware/authMiddleware");
@@ -24,6 +26,22 @@ router.get(
     verifyToken,
     isOwner,
     getMyHotels
+);
+
+// Get Single Hotel
+router.get(
+    "/:id",
+    verifyToken,
+    isOwner,
+    getSingleHotel
+);
+
+// Update Hotel
+router.put(
+    "/update/:id",
+    verifyToken,
+    isOwner,
+    updateHotel
 );
 
 module.exports = router;
