@@ -21,7 +21,6 @@ const addHotel = async (req, res) => {
             image
         } = req.body;
 
-        // Validation
         if (
             !hotelName ||
             !description ||
@@ -71,6 +70,36 @@ const addHotel = async (req, res) => {
 
 };
 
+// ===============================
+// Get My Hotels
+// ===============================
+
+const getMyHotels = async (req, res) => {
+
+    try {
+
+        const hotels = await Hotel.find({
+            owner: req.user.id
+        });
+
+        res.status(200).json({
+            success: true,
+            totalHotels: hotels.length,
+            hotels
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+};
+
 module.exports = {
-    addHotel
+    addHotel,
+    getMyHotels
 };
