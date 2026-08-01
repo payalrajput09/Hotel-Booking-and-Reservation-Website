@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>Add New Property · BookMyStay</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="common.css">
-<link rel="stylesheet" href="addHotel.css">
+<link rel="stylesheet" href="./css/common-owner.css">
+<link rel="stylesheet" href="./css/addHotel.css">
 </head>
 <body>
 <div class="app">
@@ -85,42 +85,156 @@
       </div>
 
       <div class="layout-grid">
-        <!-- Form card -->
-        <section class="card card-pad">
-          <h2 class="card-title" style="margin-bottom:24px;">Basic Information</h2>
+         <!-- Form Card -->
+<form id="addHotelForm" class="card card-pad">
 
-          <label class="field-label">Property Name</label>
-          <input class="field-input" type="text" placeholder="e.g. Azure Sands Resort" style="margin-bottom:20px;">
+    <h2 class="card-title" style="margin-bottom:24px;">
+        Basic Information
+    </h2>
 
-          <label class="field-label">Description</label>
-          <textarea class="field-textarea" placeholder="Tell travelers what makes your place special..." style="margin-bottom:20px; min-height:130px;"></textarea>
+    <!-- Hotel Name -->
+    <label class="field-label">Property Name</label>
+    <input
+        type="text"
+        id="hotelName"
+        class="field-input"
+        placeholder="e.g. Azure Sands Resort"
+        required
+        style="margin-bottom:20px;">
 
-          <div class="two-col">
-            <div>
-              <label class="field-label">Property Type</label>
-              <select class="field-select">
-                <option>Hotel</option>
-                <option>Resort</option>
-                <option>Apartment</option>
-                <option>Villa</option>
-              </select>
-            </div>
-            <div>
-              <label class="field-label">Star Rating</label>
-              <select class="field-select">
-                <option>3 Stars</option>
-                <option>4 Stars</option>
-                <option>5 Stars</option>
-              </select>
-            </div>
-          </div>
+    <!-- Description -->
+    <label class="field-label">Description</label>
+    <textarea
+        id="description"
+        class="field-textarea"
+        placeholder="Tell travelers what makes your place special..."
+        required
+        style="margin-bottom:20px; min-height:130px;"></textarea>
 
-          <div class="form-footer">
-            <button class="btn btn-primary">Next Step
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-          </div>
-        </section>
+    <!-- Property Type & Rating -->
+    <div class="two-col">
+
+        <div>
+
+            <label class="field-label">Property Type</label>
+
+            <select
+                id="propertyType"
+                class="field-select"
+                required>
+
+                <option value="">Select Property Type</option>
+                <option value="Hotel">Hotel</option>
+                <option value="Resort">Resort</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Villa">Villa</option>
+
+            </select>
+
+        </div>
+
+        <div>
+
+            <label class="field-label">Star Rating</label>
+
+            <select
+                id="starRating"
+                class="field-select"
+                required>
+
+                <option value="">Select Rating</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- Country -->
+    <label class="field-label">Country</label>
+
+    <input
+        type="text"
+        id="country"
+        class="field-input"
+        required>
+
+    <br><br>
+
+    <!-- State -->
+    <label class="field-label">State</label>
+
+    <input
+        type="text"
+        id="state"
+        class="field-input"
+        required>
+
+    <br><br>
+
+    <!-- City -->
+    <label class="field-label">City</label>
+
+    <input
+        type="text"
+        id="city"
+        class="field-input"
+        required>
+
+    <br><br>
+
+    <!-- Address -->
+    <label class="field-label">Address</label>
+
+    <textarea
+        id="address"
+        class="field-textarea"
+        required></textarea>
+
+    <br><br>
+
+    <!-- Price -->
+    <label class="field-label">Price Per Night</label>
+
+    <input
+        type="number"
+        id="price"
+        class="field-input"
+        required>
+
+    <br><br>
+
+    <!-- Image -->
+    <label class="field-label">Hotel Image URL</label>
+
+    <input
+        type="text"
+        id="image"
+        class="field-input"
+        placeholder="https://example.com/image.jpg"
+        required>
+
+    <br><br>
+
+    <!-- Submit Button -->
+    <div class="form-footer">
+
+        <button
+            type="submit"
+            class="btn btn-primary">
+
+            Add Hotel
+
+        </button>
+
+    </div>
+
+</form>   
 
         <!-- Sidebar column -->
         <aside class="side-col">
@@ -159,8 +273,7 @@
   </div>
 </div>
 
-<!-- <script src="common.js"></script>
-<script src="addHotel.js"></script> -->
+<script src="./js/addHotel.js"></script>
 
 
 </body>

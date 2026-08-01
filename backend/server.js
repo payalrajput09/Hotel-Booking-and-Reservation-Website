@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
 const ownerRoutes = require("./routes/ownerRoutes");
+const hotelRoutes = require("./routes/hotelRoutes");
 
 // Import Database
 const connectDB = require("./config/db");
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/owner", ownerRoutes);
+app.use("/api/hotels", hotelRoutes);
 
 
 

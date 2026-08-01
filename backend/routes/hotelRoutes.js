@@ -2,21 +2,24 @@ const express = require("express");
 
 const router = express.Router();
 
+const {
+    addHotel
+} = require("../controllers/hotelController");
+
 const { verifyToken } = require("../middleware/authMiddleware");
 
 const { isOwner } = require("../middleware/roleMiddleware");
 
-router.get(
-    "/dashboard",
+
+console.log("verifyToken =", verifyToken);
+console.log("isOwner =", isOwner);
+console.log("addHotel =", addHotel);
+// Add Hotel
+router.post(
+    "/add",
     verifyToken,
     isOwner,
-    (req, res) => {
-        res.status(200).json({
-            success: true,
-            message: "Welcome Owner Dashboard",
-            user: req.user
-        });
-    }
+    addHotel
 );
 
 module.exports = router;
