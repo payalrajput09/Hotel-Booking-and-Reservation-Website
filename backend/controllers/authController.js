@@ -430,10 +430,143 @@ const login = async (req, res) => {
 
 };
 
+
+// ======================================
+// Get Profile
+// ======================================
+
+const getProfile = async (req, res) => {
+
+    try {
+
+        let user;
+
+        if (req.user.role === "user") {
+
+            user = await User.findById(req.user.id).select("-password");
+
+        } else {
+
+            user = await Owner.findById(req.user.id).select("-password");
+
+        }
+
+        if (!user) {
+
+            return res.status(404).json({
+
+                success: false,
+                message: "User Not Found"
+
+            });
+
+        }
+
+        res.status(200).json({
+
+            success: true,
+            user
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
+// ======================================
+// Update Profile
+// ======================================
+
+const updateProfile = async (req, res) => {
+
+    try {
+
+        const {
+
+            fullName,
+            phone,
+            country,
+            state,
+            city
+
+        } = req.body;
+
+        let user;
+
+        if (req.user.role === "user") {
+
+            user = await User.findById(req.user.id);
+
+        } else {
+
+            user = await Owner.findById(req.user.id);
+
+        }
+
+        if (!user) {
+
+            return res.status(404).json({
+
+                success: false,
+                message: "User Not Found"
+
+            });
+
+        }
+
+        user.fullName = fullName;
+        user.phone = phone;
+        user.country = country;
+        user.state = state;
+        user.city = city;
+
+        await user.save();
+
+        res.status(200).json({
+
+            success: true,
+            message: "Profile Updated Successfully",
+            user
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
 module.exports = {
 
     registerUser,
+
     registerOwner,
-    login
+
+    login,
+
+    getProfile,
+
+    updateProfile
 
 };

@@ -128,7 +128,7 @@ const getMyBookings = async (req, res) => {
 
         })
 
-        .populate("hotel", "hotelName city state")
+        .populate("hotel", "hotelName city state image")
 
         .populate("room", "roomName roomType price image")
 
@@ -159,10 +159,92 @@ const getMyBookings = async (req, res) => {
 };
 
 
+
+// ======================================
+// Cancel Booking
+// ======================================
+
+const cancelBooking = async (req, res) => {
+
+    try {
+
+        const booking = await Booking.findById(req.params.id);
+
+        if (!booking) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Booking Not Found"
+
+            });
+
+        }
+
+        // Sirf apni booking cancel kar sakta hai
+
+        if (booking.user.toString() !== req.user.id) {
+
+            return res.status(403).json({
+
+                success: false,
+
+                message: "Unauthorized"
+
+            });
+
+        }
+
+        // Already cancelled
+
+        if (booking.status === "Cancelled") {
+
+            return res.status(400).json({
+
+                success: false,
+
+                message: "Booking Already Cancelled"
+
+            });
+
+        }
+
+        booking.status = "Cancelled";
+
+        await booking.save();
+
+        res.status(200).json({
+
+            success: true,
+
+            message: "Booking Cancelled Successfully"
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
 module.exports = {
 
     bookRoom,
 
-    getMyBookings
+    getMyBookings,
+
+    cancelBooking
 
 };

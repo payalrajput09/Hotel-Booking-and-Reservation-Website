@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        My Profile | BookMyStay
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./css/profile.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ========================= -->
+    <!-- Sidebar -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            BookMyStay
+
+        </div>
+
+        <div class="profile">
+
+            <div class="avatar">
+
+                👤
+
+            </div>
+
+            <div
+                class="name"
+                id="userName">
+
+                User Name
+
+            </div>
+
+            <div
+                class="tier"
+                id="userRole">
+
+                User
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+
+                    <a href="user-dashboard.html">
+
+                        🏠 Dashboard
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="profile.html">
+
+                        👤 My Profile
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="search.html">
+
+                        🔍 Search Hotels
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="bookings.html">
+
+                        📅 My Bookings
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="settings.html">
+
+                        ⚙️ Settings
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button
+            class="book-btn"
+            onclick="window.location.href='search.html'">
+
+            Book New Stay
+
+        </button>
+
+        <button
+            id="logoutBtn"
+            class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- ========================= -->
+    <!-- Main Content -->
+    <!-- ========================= -->
+
+    <main class="main">
+
+        <div class="page-title">
+
+            <h1>
+
+                My Profile
+
+            </h1>
+
+        </div>
+
+        <!-- Profile Card -->
+
+        <div class="profile-card">
+
+            <div class="profile-left">
+
+                <img
+                    id="profileImage"
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    alt="Profile">
+
+            </div>
+
+            <div class="profile-right">
+
+                <div class="info-box">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName">
+
+                </div>
+
+                <div class="info-box">
+
+                    <label>
+
+                        Email
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        readonly>
+
+                </div>
+
+                <div class="info-box">
+
+                    <label>
+
+                        Phone Number
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="phone">
+
+                </div>
+
+                <div class="info-box">
+
+                    <label>
+
+                        Role
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        readonly>
+
+                </div>
+
+                <div class="info-box">
+
+                    <label>
+
+                        Member Since
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="createdAt"
+                        readonly>
+
+                </div>
+
+                <button
+                    id="updateBtn"
+                    class="update-btn">
+
+                    Update Profile
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <h2 id="totalBookings">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Total Bookings
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="confirmedBookings">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Confirmed
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="pendingBookings">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Pending
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="cancelledBookings">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Cancelled
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Recent Bookings -->
+
+        <div class="recent-bookings">
+
+            <h2>
+
+                Recent Bookings
+
+            </h2>
+
+            <div id="recentBookingContainer">
+
+                <!-- Dynamic -->
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="./js/profile.js"></script>
+
+</body>
+
+</html>

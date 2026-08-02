@@ -3,11 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 const {
-
     bookRoom,
-
-    getMyBookings
-
+    getMyBookings,
+    cancelBooking
 } = require("../controllers/bookingController");
 
 const {
@@ -17,7 +15,7 @@ const {
 const allowBooking = require("../middleware/bookingAccess");
 
 // ===============================
-// Book Room (User + Owner)
+// Book Room
 // ===============================
 
 router.post(
@@ -32,13 +30,19 @@ router.post(
 // ===============================
 
 router.get(
-
     "/my-bookings",
-
     verifyToken,
-
     getMyBookings
+);
 
+// ===============================
+// Cancel Booking
+// ===============================
+
+router.put(
+    "/cancel/:id",
+    verifyToken,
+    cancelBooking
 );
 
 module.exports = router;
