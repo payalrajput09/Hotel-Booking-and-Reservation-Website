@@ -6,6 +6,10 @@ const { verifyToken } = require("../middleware/authMiddleware");
 
 const { isOwner } = require("../middleware/roleMiddleware");
 
+const {
+    getOwnerProfile
+} = require("../controllers/ownerController");
+
 router.get(
     "/dashboard",
     verifyToken,
@@ -17,6 +21,16 @@ router.get(
             user: req.user
         });
     }
+);
+
+router.get(
+
+    "/profile",
+
+    verifyToken,
+
+    getOwnerProfile
+
 );
 
 module.exports = router;

@@ -3,10 +3,21 @@ const express = require("express");
 const router = express.Router();
 
 const {
+
     bookRoom,
+
     getMyBookings,
-    cancelBooking
+
+    cancelBooking,
+
+    getOwnerBookings,
+
+    acceptBooking,
+
+    rejectBooking
+
 } = require("../controllers/bookingController");
+
 
 const {
     verifyToken
@@ -44,5 +55,53 @@ router.put(
     verifyToken,
     cancelBooking
 );
+
+
+// ======================================
+// Owner Bookings
+// ======================================
+
+router.get(
+
+    "/owner-bookings",
+
+    verifyToken,
+
+    getOwnerBookings
+
+);
+
+
+
+// ======================================
+// Accept Booking
+// ======================================
+
+router.put(
+
+    "/accept/:id",
+
+    verifyToken,
+
+    acceptBooking
+
+);
+
+
+// ======================================
+// Reject Booking
+// ======================================
+
+router.put(
+
+    "/reject/:id",
+
+    verifyToken,
+
+    rejectBooking
+
+);
+
+
 
 module.exports = router;

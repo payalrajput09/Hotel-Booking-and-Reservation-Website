@@ -239,12 +239,184 @@ const cancelBooking = async (req, res) => {
 };
 
 
+// ======================================
+// Get Owner Bookings
+// ======================================
+
+const getOwnerBookings = async (req, res) => {
+
+    try {
+
+        const bookings = await Booking.find({
+
+            owner: req.user.id
+
+        })
+
+        .populate("hotel", "hotelName city state image")
+
+        .populate("room", "roomName roomType price image")
+
+        .populate("user", "fullName email phone")
+
+        .sort({ createdAt: -1 });
+
+        res.status(200).json({
+
+            success: true,
+
+            bookings
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
+// ======================================
+// Accept Booking
+// ======================================
+
+const acceptBooking = async (req, res) => {
+
+    try {
+
+        const booking = await Booking.findById(req.params.id);
+
+        if (!booking) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Booking Not Found"
+
+            });
+
+        }
+
+        if (booking.owner.toString() !== req.user.id) {
+
+            return res.status(403).json({
+
+                success: false,
+
+                message: "Unauthorized"
+
+            });
+
+        }
+
+        booking.status = "Confirmed";
+
+        await booking.save();
+
+        res.status(200).json({
+
+            success: true,
+
+            message: "Booking Confirmed Successfully"
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
+// ======================================
+// Reject Booking
+// ======================================
+
+const rejectBooking = async (req, res) => {
+
+    try {
+
+        const booking = await Booking.findById(req.params.id);
+
+        if (!booking) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Booking Not Found"
+
+            });
+
+        }
+
+        if (booking.owner.toString() !== req.user.id) {
+
+            return res.status(403).json({
+
+                success: false,
+
+                message: "Unauthorized"
+
+            });
+
+        }
+
+        booking.status = "Rejected";
+
+        await booking.save();
+
+        res.status(200).json({
+
+            success: true,
+
+            message: "Booking Rejected Successfully"
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
 module.exports = {
-
     bookRoom,
-
     getMyBookings,
-
-    cancelBooking
-
+    cancelBooking,
+    getOwnerBookings,
+    acceptBooking,
+    rejectBooking
 };

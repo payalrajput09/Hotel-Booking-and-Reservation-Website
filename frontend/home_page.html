@@ -15,10 +15,10 @@
     <div class="container header-inner">
       <div class="logo">BookMyStay</div>
       <nav class="main-nav">
-        <a href="/" class="active">Explore</a>
-        <a href="#">Destinations</a>
-        <a href="#">Offers</a>
-        <a href="#">Newsletter</a>
+         <a href="#explore" class="active">Explore</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#offers">Offers</a>
+    <a href="#newsletter">Newsletter</a>
       </nav>
       <div class="header-actions">
          <a href="login.html">Login</a>
@@ -28,32 +28,13 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" id="explore">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <h1>Discover Your Next Luxury Sanctuary</h1>
       <p>Handpicked stays for the discerning traveler. Experience unparalleled hospitality in the world's most breathtaking locations.</p>
 
-      <div class="search-bar">
-        <div class="search-field">
-          <label>Destination</label>
-          <input type="text" placeholder="Where are you going?">
-        </div>
-        <div class="search-divider"></div>
-        <div class="search-field">
-          <label>Check-in/out</label>
-          <input type="text" placeholder="Add dates">
-        </div>
-        <div class="search-divider"></div>
-        <div class="search-field">
-          <label>Guests</label>
-          <input type="text" placeholder="Add guests">
-        </div>
-        <button class="btn btn-primary search-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Search
-        </button>
-      </div>
+     
     </div>
 
     <!-- Stats -->
@@ -80,7 +61,7 @@
   </section>
 
   <!-- Popular Destinations -->
-  <section class="section destinations">
+  <section class="section destinations" id="destinations">
     <div class="container">
       <div class="section-header">
         <div>
@@ -146,7 +127,7 @@
   </section>
 
   <!-- Featured Hotels -->
-  <section class="section featured-hotels">
+  <section class="section featured-hotels" id="offers">
     <div class="container">
       <div class="section-header">
         <div>
@@ -300,7 +281,7 @@
         <a href="#">Sitemap</a>
       </div>
 
-      <div class="footer-col newsletter-col">
+      <div class="footer-col newsletter-col" id="newsletter">
         <h4>NEWSLETTER</h4>
         <p>Subscribe to receive exclusive deals and travel inspiration.</p>
         <form class="newsletter-form">

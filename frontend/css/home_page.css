@@ -505,3 +505,8 @@ input{font-family:inherit;}
   .stat{flex:0 0 50%;margin-bottom:16px;border-right:none;}
   .footer-top{grid-template-columns:1fr;}
 }
+
+
+html {
+    scroll-behavior: smooth;
+}

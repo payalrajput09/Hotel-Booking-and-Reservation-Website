@@ -113,7 +113,9 @@ const bookingSchema = new mongoose.Schema(
 
                 "Checked Out",
 
-                "Cancelled"
+                "Cancelled",
+
+                "Rejected",
 
             ],
 
