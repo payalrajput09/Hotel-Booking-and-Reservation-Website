@@ -196,13 +196,15 @@ async function loadRooms() {
 // Book Room
 // =============================
 
+// =============================
+// Book Room
+// =============================
+
 function bookRoom(roomId) {
 
-    window.location.href =
-    `booking.html?roomId=${roomId}`;
+    window.location.href = `reservation.html?roomId=${roomId}`;
 
 }
-
 // =============================
 // Start
 // =============================

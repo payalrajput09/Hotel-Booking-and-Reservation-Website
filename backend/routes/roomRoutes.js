@@ -8,7 +8,8 @@ const {
     getSingleRoom,
     updateRoom,
     deleteRoom,
-    getRoomsByHotel
+    getRoomsByHotel,
+    getRoomDetails
 } = require("../controllers/roomController");
 
 const { verifyToken } = require("../middleware/authMiddleware");
@@ -64,6 +65,13 @@ router.get(
     "/hotel/:hotelId",
     verifyToken,
     getRoomsByHotel
+);
+
+
+router.get(
+    "/details/:id",
+    verifyToken,
+    getRoomDetails
 );
 
 module.exports = router;

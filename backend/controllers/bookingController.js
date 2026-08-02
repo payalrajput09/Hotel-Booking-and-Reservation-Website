@@ -13,13 +13,13 @@ const bookRoom = async (req, res) => {
 
           console.log(req.body);   // 👈 yaha
         const {
-
-            roomId,
-            checkInDate,
+           roomId,
+           checkInDate,
             checkOutDate,
-            guests
+            guests,
+            guestName
+               } = req.body;
 
-        } = req.body;
 
         // Room Find
 
@@ -65,23 +65,25 @@ const bookRoom = async (req, res) => {
 
         const booking = await Booking.create({
 
-            user: req.user.id,
+    user: req.user.id,
 
-            owner: room.owner,
+    owner: room.owner,
 
-            hotel: room.hotel._id,
+    hotel: room.hotel._id,
 
-            room: room._id,
+    room: room._id,
 
-            checkInDate,
+    checkInDate,
 
-            checkOutDate,
+    checkOutDate,
 
-            guests,
+    guests,
 
-            totalPrice
+    guestName,
 
-        });
+    totalPrice
+
+});
 
         res.status(201).json({
 

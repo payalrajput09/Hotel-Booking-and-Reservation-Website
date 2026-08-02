@@ -372,13 +372,54 @@ const getRoomsByHotel = async (req, res) => {
 
 };
 
+const getRoomDetails = async (req, res) => {
+
+    try {
+
+        const room = await Room.findById(req.params.id)
+            .populate("hotel");
+
+        if (!room) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Room Not Found"
+            });
+
+        }
+
+        res.status(200).json({
+
+            success: true,
+            room
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
+
+};
+
 
 
 module.exports = {
+
     addRoom,
     getMyRooms,
     getSingleRoom,
     updateRoom,
     deleteRoom,
-    getRoomsByHotel
+    getRoomsByHotel,
+    getRoomDetails
+
 };

@@ -82,6 +82,11 @@ const bookingSchema = new mongoose.Schema(
 
         },
 
+        guestName: {
+             type: String,
+             required: true
+          },
+
         // Total Price
 
         totalPrice: {

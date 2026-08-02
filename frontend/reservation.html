@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Book Room | BookMyStay</title>
+
+<link rel="stylesheet"
+href="./css/reservation.css">
+
+</head>
+
+<body>
+
+<div class="reservation-container">
+
+    <a
+        href="javascript:history.back()"
+        class="back-btn">
+
+        ← Back
+
+    </a>
+
+    <h1>
+
+        Complete Your Booking
+
+    </h1>
+
+    <div class="booking-card">
+
+        <!-- Hotel -->
+
+        <div class="hotel-info">
+
+            <img
+                id="roomImage"
+                src=""
+                alt="Room">
+
+            <div>
+
+                <h2 id="hotelName">
+
+                    Hotel Name
+
+                </h2>
+
+                <h3 id="roomName">
+
+                    Room Name
+
+                </h3>
+
+                <p>
+
+                    ₹<span id="pricePerNight">
+
+                    0
+
+                    </span> / Night
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Booking Form -->
+
+        <form id="bookingForm">
+
+            <div class="input-group">
+
+                <label>
+
+                    Check In
+
+                </label>
+
+                <input
+                    type="date"
+                    id="checkIn"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+
+                    Check Out
+
+                </label>
+
+                <input
+                    type="date"
+                    id="checkOut"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+
+                    Guests
+
+                </label>
+
+                <input
+                    type="number"
+                    id="guests"
+                    min="1"
+                    value="1">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+
+                    Guest Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="guestName"
+                    placeholder="Enter Guest Name">
+
+            </div>
+
+            <div class="price-box">
+
+                <h3>
+
+                    Price Summary
+
+                </h3>
+
+                <p>
+
+                    Total Price
+
+                </p>
+
+                <h2>
+
+                    ₹<span id="totalPrice">
+
+                        0
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+            <button
+                type="submit"
+                class="book-btn">
+
+                Book Now
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="./js/reservation.js"></script>
+
+</body>
+
+</html>
