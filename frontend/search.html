@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Search Hotels | BookMyStay
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./css/search.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ========================= -->
+    <!-- Sidebar -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            BookMyStay
+
+        </div>
+
+        <div class="profile">
+
+            <div class="avatar">
+
+                👤
+
+            </div>
+
+            <div
+                class="name"
+                id="userName">
+
+                User Name
+
+            </div>
+
+            <div
+                class="tier"
+                id="userRole">
+
+                User
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+
+                    <a href="user-dashboard.html">
+
+                        🏠 Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="profile.html">
+
+                        👤 My Profile
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="search.html">
+
+                        🔍 Search Hotels
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="bookings.html">
+
+                        📅 My Bookings
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="settings.html">
+
+                        ⚙️ Settings
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button
+            class="book-btn"
+            onclick="window.location.href='bookings.html'">
+
+            My Bookings
+
+        </button>
+
+        <button
+
+            id="logoutBtn"
+
+            class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- ========================= -->
+    <!-- Main Content -->
+    <!-- ========================= -->
+
+    <main class="main">
+
+        <!-- Top Bar -->
+
+        <div class="topbar">
+
+            <h1>
+
+                Search Hotels
+
+            </h1>
+
+            <div class="search-box">
+
+                <input
+
+                    type="text"
+
+                    id="searchInput"
+
+                    placeholder="Search by Hotel Name or City">
+
+            </div>
+
+        </div>
+
+        <!-- Filters -->
+
+        <div class="filter-section">
+
+            <select id="cityFilter">
+
+                <option value="">
+
+                    All Cities
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Hotel Cards -->
+
+        <div
+
+            class="hotel-container"
+
+            id="hotelContainer">
+
+            <!-- Dynamic Cards Here -->
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="./js/search.js"></script>
+
+</body>
+
+</html>

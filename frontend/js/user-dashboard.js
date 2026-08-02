@@ -52,3 +52,59 @@ document
     window.location.href = "login.html";
 
 });
+
+
+// =============================
+// Dashboard Elements
+// =============================
+
+const totalBookings = document.getElementById("totalBookings");
+
+const pendingBookings = document.getElementById("pendingBookings");
+
+const recentBookings = document.getElementById("recentBookings");
+
+const activityContainer = document.getElementById("activityContainer");
+
+const tripHotel = document.getElementById("tripHotel");
+
+const tripDates = document.getElementById("tripDates");
+
+const tripStatus = document.getElementById("tripStatus");
+
+const tripId = document.getElementById("tripId");
+
+
+// =============================
+// Load User Bookings
+// =============================
+
+async function loadBookings() {
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:5000/api/bookings/my-bookings",
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        );
+
+        const data = await response.json();
+
+        console.log(data);
+
+    }
+
+    catch (error) {
+
+        console.log(error);
+
+    }
+
+}
+
+
+loadBookings();

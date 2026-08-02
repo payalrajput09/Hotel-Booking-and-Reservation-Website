@@ -3,25 +3,54 @@ const express = require("express");
 const router = express.Router();
 
 const {
+
     addHotel,
+
     getMyHotels,
+
     getSingleHotel,
+
     updateHotel,
-    deleteHotel
+
+    deleteHotel,
+
+    getAllHotels,
+
+    getHotelDetails
+
 } = require("../controllers/hotelController");
 
 const { verifyToken } = require("../middleware/authMiddleware");
 const { isOwner } = require("../middleware/roleMiddleware");
 
+
 // Add Hotel
-router.post(
-    "/add",
+router.post("/add", verifyToken, isOwner, addHotel);
+
+// ===============================
+// User - Get All Hotels
+// ===============================
+
+router.get(
+    "/",
     verifyToken,
-    isOwner,
-    addHotel
+    getAllHotels
 );
 
-// Get My Hotels
+// ===============================
+// User - Hotel Details
+// ===============================
+
+router.get(
+    "/details/:id",
+    verifyToken,
+    getHotelDetails
+);
+
+// ===============================
+// Owner - Get My Hotels
+// ===============================
+
 router.get(
     "/my-hotels",
     verifyToken,
@@ -29,7 +58,10 @@ router.get(
     getMyHotels
 );
 
-// Get Single Hotel
+// ===============================
+// Owner - Get Single Hotel
+// ===============================
+
 router.get(
     "/:id",
     verifyToken,
@@ -52,6 +84,5 @@ router.delete(
     isOwner,
     deleteHotel
 );
-
 
 module.exports = router;

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Guest Details · BookMyStay</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .checkout-topbar {
+    height:74px; background:#fff; border-bottom:1px solid var(--border);
+    display:flex; align-items:center; justify-content:space-between; padding:0 40px;
+  }
+  .steps { display:flex; gap:36px; }
+  .steps a { font-weight:600; color:var(--muted-light); font-size:15px; }
+  .steps a.active { color:var(--navy-900); border-bottom:2px solid var(--navy-900); padding-bottom:6px; }
+  .checkout-wrap {
+    max-width:1560px; margin:0 auto; padding:40px; display:grid;
+    grid-template-columns: 300px 1fr 420px; gap:30px; align-items:start;
+  }
+  .step-nav a { display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:12px; font-weight:600; color:var(--muted-light); margin-bottom:6px; }
+  .step-nav a.current { background:var(--blue-600); color:#fff; }
+  .field-label { font-weight:700; font-size:14px; margin-bottom:8px; display:block; }
+  .field-input { width:100%; border:1px solid var(--border); border-radius:10px; padding:13px 16px; font-size:14.5px; font-family:inherit; background:#fff; }
+  textarea.field-input { resize:vertical; min-height:100px; }
+  .room-photo { position:relative; border-radius:16px; overflow:hidden; margin-bottom:20px; }
+  .room-photo img { width:100%; height:200px; object-fit:cover; }
+</style>
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column;background:linear-gradient(180deg,#eef2fb,#f4f6fa 320px);">
+
+  <header class="checkout-topbar">
+    <div class="brand" style="padding:0;font-size:20px;">BookMyStay</div>
+    <div class="steps">
+      <a href="room-selection.html">Room</a>
+      <a href="guest-details.html" class="active">Details</a>
+      <a href="#">Summary</a>
+      <a href="#">Payment</a>
+    </div>
+    <div class="flex items-center gap-8 muted small" style="font-weight:700;letter-spacing:0.04em;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      SECURE CHECKOUT
+    </div>
+  </header>
+
+  <div class="checkout-wrap">
+
+    <!-- Left step list -->
+    <div class="card card-pad">
+      <div style="font-weight:800;font-size:19px;color:var(--navy-900);margin-bottom:2px;">Booking Summary</div>
+      <div class="muted small" style="margin-bottom:18px;">Azure Grand Resort</div>
+
+      <nav class="step-nav">
+        <a href="room-selection.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v-2a2 2 0 0 1 2-2h2"/></svg>
+          Reservation
+        </a>
+        <a href="guest-details.html" class="current">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Guest Info
+        </a>
+        <a href="#">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          Price Summary
+        </a>
+        <a href="#">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Secure Pay
+        </a>
+      </nav>
+    </div>
+
+    <!-- Center form -->
+    <div class="card card-pad">
+      <h1 style="margin:0 0 8px;font-size:30px;color:var(--navy-900);">Guest Details</h1>
+      <p class="muted" style="margin:0 0 30px;">Please provide the details of the primary guest for this booking.</p>
+
+      <div class="grid" style="grid-template-columns:1fr 1fr;margin-bottom:22px;">
+        <div>
+          <label class="field-label">Primary Guest Name</label>
+          <input class="field-input" type="text" placeholder="e.g. Johnathan Doe">
+        </div>
+        <div>
+          <label class="field-label">Email Address</label>
+          <input class="field-input" type="email" placeholder="john.doe@premium.com">
+        </div>
+      </div>
+
+      <label class="field-label">Phone Number</label>
+      <div class="grid" style="grid-template-columns:140px 1fr;margin-bottom:22px;">
+        <select class="field-input"><option>+1 (USA)</option><option>+44 (UK)</option><option>+91 (IN)</option></select>
+        <input class="field-input" type="tel" placeholder="202-555-0123">
+      </div>
+
+      <label class="field-label">Special Requests</label>
+      <textarea class="field-input" placeholder="e.g. Dietary preferences, early check-in, or high floor request..."></textarea>
+      <p class="muted small" style="font-style:italic;margin:10px 0 24px;">Requests are subject to availability upon arrival.</p>
+
+      <hr class="divider" style="margin-bottom:24px;">
+
+      <div class="flex items-center gap-24">
+        <a href="room-selection.html" style="color:var(--blue-600);font-weight:700;">← Back to Room Choice</a>
+        <button class="btn btn-navy" style="flex:1;padding:18px;font-size:16px;">Continue to Summary</button>
+      </div>
+    </div>
+
+    <!-- Right summary -->
+    <div>
+      <div class="card" style="overflow:hidden;margin-bottom:16px;">
+        <div class="room-photo" style="margin-bottom:0;border-radius:0;">
+          <img src="https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?w=600&h=400&fit=crop">
+          <span class="pill" style="position:absolute;top:14px;left:14px;background:#f3c969;color:#5a4200;">Selected Room</span>
+        </div>
+        <div class="card-pad">
+          <div style="font-size:20px;font-weight:800;color:var(--navy-900);margin-bottom:18px;">Deluxe Ocean Suite</div>
+
+          <div class="flex justify-between" style="margin-bottom:20px;">
+            <div>
+              <div class="muted small" style="letter-spacing:0.04em;">CHECK-IN</div>
+              <div style="font-weight:700;">Oct 12, 2024</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="muted small" style="letter-spacing:0.04em;">CHECK-OUT</div>
+              <div style="font-weight:700;">Oct 15, 2024</div>
+            </div>
+          </div>
+
+          <div style="background:var(--bg);border-radius:10px;padding:14px 16px;margin-bottom:20px;">
+            <div class="flex justify-between small" style="margin-bottom:8px;"><span class="muted">Stay Duration</span><strong>3 Nights</strong></div>
+            <div class="flex justify-between small"><span class="muted">Guests</span><strong>2 Adults</strong></div>
+          </div>
+
+          <hr class="divider" style="margin-bottom:16px;">
+          <div class="flex justify-between small" style="margin-bottom:10px;"><span class="muted">Room Rate (per night)</span><strong>$540.00</strong></div>
+          <div class="flex justify-between small" style="margin-bottom:16px;"><span class="muted">Taxes & Fees</span><strong>$124.50</strong></div>
+          <hr class="divider" style="margin-bottom:16px;">
+
+          <div class="flex justify-between items-center" style="margin-bottom:14px;">
+            <span style="font-weight:800;font-size:19px;color:var(--navy-900);">Total</span>
+            <span style="font-weight:800;font-size:19px;color:var(--navy-900);">$1,744.50</span>
+          </div>
+          <div class="flex items-center gap-8 small muted">ⓘ Free cancellation until Oct 10</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-8 muted small" style="justify-content:center;">
+        🛡 SSL Encrypted Payment Processing
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

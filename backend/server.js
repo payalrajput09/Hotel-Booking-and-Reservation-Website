@@ -7,6 +7,7 @@ const userRoutes = require("./routes/userRoutes");
 const ownerRoutes = require("./routes/ownerRoutes");
 const hotelRoutes = require("./routes/hotelRoutes");
 const roomRoutes = require("./routes/roomRoutes");
+const bookingRoutes = require("./routes/bookingRoutes");
 
 // Import Database
 const connectDB = require("./config/db");
@@ -29,6 +30,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/owner", ownerRoutes);
 app.use("/api/hotels", hotelRoutes);
 app.use("/api/rooms", roomRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 console.log("✅ Room Routes Registered");
 

@@ -329,12 +329,56 @@ const deleteRoom = async (req, res) => {
 
 };
 
-module.exports = {
 
+// ======================================
+// User - Get Rooms By Hotel
+// ======================================
+
+
+
+const getRoomsByHotel = async (req, res) => {
+
+    try {
+
+        const rooms = await Room.find({
+
+            hotel: req.params.hotelId
+
+        });
+
+        res.status(200).json({
+
+            success: true,
+
+            totalRooms: rooms.length,
+
+            rooms
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+
+
+module.exports = {
     addRoom,
     getMyRooms,
     getSingleRoom,
     updateRoom,
-    deleteRoom
-
+    deleteRoom,
+    getRoomsByHotel
 };

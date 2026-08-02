@@ -251,12 +251,105 @@ const deleteHotel = async (req, res) => {
 
 };
 
+
+// ===============================
+// Get All Hotels (User)
+// ===============================
+
+const getAllHotels = async (req, res) => {
+
+    try {
+
+        const hotels = await Hotel.find();
+
+        res.status(200).json({
+
+            success: true,
+
+            totalHotels: hotels.length,
+
+            hotels
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+// ===============================
+// Get Hotel Details (User)
+// ===============================
+
+const getHotelDetails = async (req, res) => {
+
+    try {
+
+        const hotel = await Hotel.findById(req.params.id);
+
+        if (!hotel) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Hotel Not Found"
+
+            });
+
+        }
+
+        res.status(200).json({
+
+            success: true,
+
+            hotel
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
   
 
 module.exports = {
+
     addHotel,
+
     getMyHotels,
+
     getSingleHotel,
+
     updateHotel,
-    deleteHotel
+
+    deleteHotel,
+
+    getAllHotels,
+
+    getHotelDetails
+
 };

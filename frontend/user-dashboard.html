@@ -23,23 +23,65 @@
 </div>
 
     <nav>
-      <ul>
-        <li class="active"><a href="index.html"><span class="icon">&#9634;</span> Dashboard</a></li>
-        <li><a href="profile.html"><span class="icon">&#128100;</span> Profile</a></li>
-        <li><a href="search.html"><span class="icon">&#128269;</span> Search</a></li>
-        <li><a href="wishlist.html"><span class="icon">&#9825;</span> Wishlist</a></li>
-        <li><a href="bookings.html"><span class="icon">&#128197;</span> Bookings</a></li>
-        <li><a href="payments.html"><span class="icon">&#128179;</span> Payments</a></li>
-        <li><a href="reviews.html"><span class="icon">&#128196;</span> Reviews</a></li>
-      </ul>
-    </nav>
+  <ul>
 
-    <button class="book-btn">Book New Stay</button>
-    <ul class="bottom-links">
-      <li><span class="icon">&#9881;</span> Settings</li>
-      <li><span class="icon">&#9432;</span> Support</li>
-    </ul>
+    <li class="active">
+      <a href="user-dashboard.html">
+        <span class="icon">🏠</span>
+        Dashboard
+      </a>
+    </li>
+
+    <li>
+      <a href="profile.html">
+        <span class="icon">👤</span>
+        My Profile
+      </a>
+    </li>
+
+    <li>
+      <a href="search.html">
+        <span class="icon">🔍</span>
+        Search Hotels
+      </a>
+    </li>
+
+    <li>
+      <a href="bookings.html">
+        <span class="icon">📅</span>
+        My Bookings
+      </a>
+    </li>
+
+    <li>
+      <a href="settings.html">
+        <span class="icon">⚙️</span>
+        Settings
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
     <button
+class="book-btn"
+onclick="window.location.href='search.html'">
+
+Book New Stay
+
+</button>
+    <ul class="bottom-links">
+         <li onclick="window.location.href='settings.html'">
+        <span class="icon">⚙️</span>
+        Settings
+        </li>
+
+        <li>
+        <span class="icon">❓</span>
+        Help & Support
+         </li>
+      </ul>
+  <button
     id="logoutBtn"
     class="book-btn"
     style="margin-top:15px; background:#dc3545;">Logout
@@ -51,7 +93,14 @@
     <div class="topbar">
       <h1>Dashboard</h1>
       <div class="topbar-right">
-        <div class="search-box">&#128269; Search your stays...</div>
+        <div class="search-box">
+
+    <input
+        type="text"
+        placeholder="Search Hotels..."
+        id="searchInput">
+
+</div>
         <div class="bell">&#128276;</div>
       </div>
     </div>
@@ -59,93 +108,154 @@
     <div class="content">
 
       <div class="welcome-card">
-        <h2 id="welcomeText">Welcome Back</h2>
-        <p>You have 2 upcoming trips this month. Ready to explore your next destination?</p>
-        <button class="explore-btn">Explore Offers</button>
-      </div>
+
+    <h2 id="welcomeText">
+        Welcome Back
+    </h2>
+
+    <p>
+        Manage your bookings and discover your next stay with BookMyStay.
+    </p>
+
+    <button
+        class="explore-btn"
+        onclick="window.location.href='search.html'">
+
+        Explore Hotels
+
+    </button>
+
+</div>
 
       <div class="stats-row">
         <div class="stat-card">
           <div class="stat-top">
-            <div class="stat-icon blue">&#128188;</div>
-            <span class="badge up">+12%</span>
+            <div class="stat-icon blue">📅</div>
+           
           </div>
           <div class="stat-label">Total Bookings</div>
-          <div class="stat-value">24</div>
+          <div
+    class="stat-value"
+    id="totalBookings">
+
+    0
+
+</div>
         </div>
 
         <div class="stat-card">
-          <div class="stat-top">
-            <div class="stat-icon amber">&#9733;</div>
-            <span class="badge rank">Top 5% User</span>
-          </div>
-          <div class="stat-label">Reviews Written</div>
-          <div class="stat-value">18</div>
+
+    <div class="stat-top">
+
+        <div class="stat-icon amber">
+             🏨    
         </div>
 
+    </div>
+
+    <div class="stat-label">
+        Pending Bookings
+    </div>
+
+    <div
+        class="stat-value"
+        id="pendingBookings">
+
+        0
+
+    </div>
+
+</div>
+
         <div class="trip-card">
-          <div class="trip-head">
-            <h3>Upcoming Trip</h3>
-            <a href="#">Details</a>
-          </div>
-          <div class="trip-body">
-            <div class="trip-img"></div>
-            <div class="trip-info">
-              <h4>Azure Sands Resort</h4>
-              <p>Maldives &middot; Oct 12 - Oct 18</p>
-              <span class="confirmed">Confirmed</span>
-              <span class="booking-id">Booking #EG-6021</span>
-            </div>
-          </div>
+
+    <div class="trip-head">
+
+        <h3>
+            Upcoming Trip
+        </h3>
+
+    </div>
+
+    <div class="trip-body">
+
+        <div class="trip-img"></div>
+
+        <div class="trip-info">
+
+            <h4 id="tripHotel">
+                No Upcoming Booking
+            </h4>
+
+            <p id="tripDates">
+                --
+            </p>
+
+            <span
+                class="confirmed"
+                id="tripStatus">
+
+                --
+
+            </span>
+
+            <span
+                class="booking-id"
+                id="tripId">
+
+            </span>
+
         </div>
+
+    </div>
+
+</div> 
+
       </div>
 
       <div class="lower-row">
+        
         <div class="activity-card">
-          <div class="activity-head">
-            <h3>Recent Activity</h3>
-            <span class="filter-icon">&#9776;</span>
-          </div>
 
-          <div class="activity-item">
-            <div class="act-icon blue">&#128197;</div>
-            <div class="act-text">
-              <p>Changed dates for <b>Mountain Peak Lodge</b></p>
-              <span>2 hours ago</span>
-            </div>
-            <span class="chevron">&rsaquo;</span>
-          </div>
+    <div class="activity-head">
 
-          <div class="activity-item">
-            <div class="act-icon green">&#10003;</div>
-            <div class="act-text">
-              <p>Payment successful for <b>The Ritz-Carlton</b></p>
-              <span>Yesterday, 14:20</span>
-            </div>
-            <span class="chevron">&rsaquo;</span>
-          </div>
+        <h3>Recent Activity</h3>
 
-          <div class="activity-item">
-            <div class="act-icon pink">&#9825;</div>
-            <div class="act-text">
-              <p>Added <b>Grand Tokyo Oasis</b> to wishlist</p>
-              <span>Oct 03, 2024</span>
-            </div>
-            <span class="chevron">&rsaquo;</span>
-          </div>
-        </div>
+        <span class="filter-icon">&#9776;</span>
 
-        <div class="favorites-card">
-          <h3>Favorite Hotels</h3>
-          <div class="fav-item fav1">
-            <div class="fav-heart">&#9825;</div>
-            <span>Hotel de Paris</span>
-          </div>
-          <div class="fav-item fav2">
-            <div class="fav-heart">&#9825;</div>
-            <span>Skyline Penthouse</span>
-          </div>
-        </div>
+    </div>
+
+    <div id="activityContainer">
+
+        <p style="padding:20px;color:gray;">
+
+            No Recent Activity
+
+        </p>
+
+    </div>
+
+</div>
+          
+
+           <div class="favorites-card">
+
+    <h3>
+        Recent Bookings
+    </h3>
+
+    <div id="recentBookings">
+
+        <p style="padding:15px;color:gray;">
+
+            No Bookings Found
+
+        </p>
+
+    </div>
+
+</div>
+       
       </div>
 
     </div>
@@ -153,5 +263,5 @@
        <script src="./js/user-dashboard.js"></script>
 
 </body>
-</body>
+
 </html>

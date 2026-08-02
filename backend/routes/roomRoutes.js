@@ -7,9 +7,9 @@ const {
     getMyRooms,
     getSingleRoom,
     updateRoom,
-    deleteRoom
+    deleteRoom,
+    getRoomsByHotel
 } = require("../controllers/roomController");
-
 
 const { verifyToken } = require("../middleware/authMiddleware");
 const { isOwner } = require("../middleware/roleMiddleware");
@@ -54,6 +54,16 @@ router.delete(
      isOwner,
      deleteRoom
 
+);
+
+// ===============================
+// User - Get Rooms of Hotel
+// ===============================
+
+router.get(
+    "/hotel/:hotelId",
+    verifyToken,
+    getRoomsByHotel
 );
 
 module.exports = router;
