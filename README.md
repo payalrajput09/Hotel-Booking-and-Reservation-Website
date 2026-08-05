@@ -206,8 +206,27 @@ JWT_SECRET=your_secret_key
 - Input Validation
 
 ---
+## 📸 Screenshots
 
----
+### 🏠 Home Page
+<img width="1763" height="3911" alt="image" src="https://github.com/user-attachments/assets/129163a7-1f32-426c-a194-a649276cb6ff" />
+
+
+### 🔐 Login Page
+<img width="1907" height="921" alt="image" src="https://github.com/user-attachments/assets/5d50a348-bec1-4aae-b96d-e5cb386630bb" />
+
+
+### 👤 User Dashboard
+<img width="1910" height="916" alt="image" src="https://github.com/user-attachments/assets/63f5dc04-2ab4-41a3-b21e-7d5aa7409f0d" />
+
+
+### 🔍 Search Hotels
+<img width="1907" height="906" alt="image" src="https://github.com/user-attachments/assets/86b27bdc-3a73-4b59-b6b0-2426457edade" />
+
+
+### 🏨 Owner Dashboard
+<img width="1763" height="1198" alt="image" src="https://github.com/user-attachments/assets/58b5e3d9-1e50-4a96-8552-b547bf418c14" />
+
 
 # 🚀 Future Enhancements
 
