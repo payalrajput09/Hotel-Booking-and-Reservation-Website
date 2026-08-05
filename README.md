@@ -1,4 +1,4 @@
-<img width="1763" height="3911" alt="image" src="https://github.com/user-attachments/assets/c2053150-2e0d-4210-82e5-14ec6678347c" /><img width="1763" height="3911" alt="image" src="https://github.com/user-attachments/assets/db002606-185d-4f25-b6c4-d45345e0d789" /><img width="1763" height="3911" alt="image" src="https://github.com/user-attachments/assets/44ecf792-ae84-4446-a7e4-e3f9cc6b1180" /># 🏨 BookMyStay - Hotel Booking & Reservation Website
+🏨 BookMyStay - Hotel Booking & Reservation Website
 
 BookMyStay is a Full Stack Hotel Booking and Reservation Management System that allows users to search hotels, book rooms, and manage reservations. Hotel owners can manage hotels, rooms, bookings, and view dashboard analytics.
 
